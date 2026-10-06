@@ -1,10 +1,12 @@
 # Albert Chan | Support Operations Lead
 
-**[Explore the public demo](https://victorvictory88.github.io/Support-Operations-Lead/)** · [ChatGPT Site](https://support-operations-albert-chan.albe88948804.chatgpt.site/)
+**[Read the take-home recommendation](https://victorvictory88.github.io/Support-Operations-Lead/)** · [Explore Operating Scenarios](https://victorvictory88.github.io/Support-Operations-Lead/operating-scenarios.html)
+
+The home page presents a three-year Support recommendation for the hypothetical one-billion-weekly-user exercise. It includes a capacity sensitivity model, investment sequence, vendor operating model, decision scorecard, and source trail. The eight-page [PDF](src/assets/Albert-Chan-OpenAI-Support-Operations-Take-Home.pdf) carries the core recommendation for asynchronous review. The original four-scenario demonstration remains available through the top navigation.
 
 ![Support Operations Lead demonstration](docs/assets/overview.png)
 
-This independent candidate demonstration presents four fictional scenarios for Quality, Productivity, Capacity, and Cost to serve. Each selection updates the operating brief, specialist team, problem, insight, and operator actions immediately.
+The Operating Scenarios page presents four fictional cases for Quality, Productivity, Capacity, and Cost to serve. Each selection updates the operating brief, specialist team, problem, insight, and operator actions immediately.
 
 ## Run locally
 
@@ -19,7 +21,7 @@ npm run preview
 
 ## Reading the page
 
-The green split screen pairs a resume-grounded introduction with an orchestrator and three specialists selected for the scenario. Each box shows its input, output, and next handoff. A slow pulse follows one sequential handoff at a time, with pause and reduced-motion controls.
+The recommendation is the home page. The top navigation opens Operating Scenarios, where the green split screen pairs a resume-grounded introduction with an orchestrator and three specialists selected for the scenario. Each box shows its input, output, and next handoff. A slow pulse follows one sequential handoff at a time, with pause and reduced-motion controls.
 
 The analysis shows the problem, insight, requested metric scorecards, next check, and uncertainty. Scorecards expose actual results, goals, and gaps. Calculations and fictional records expand underneath. Each action has a named fictional owner, due date, red/yellow/green status box, and expandable proof. A communication draft remains collapsed until requested.
 
@@ -35,7 +37,7 @@ Onigiri answers bounded questions from selected page content and fixed topic rul
 
 ## Candidate evidence and project isolation
 
-The introduction retains the applicant-provided resume’s Meta vendor governance and Rowland workflow claims. The application resume accompanies the public demonstration. This revision adds no personal career claims.
+The recommendation uses Albert's confirmed Meta partner governance, Google Japan and Korea support role, and Rowland AI workflow experience. Its growth rates, case-effort multiplier, and proposed 75% verified automated-resolution rate are planning assumptions, separate from OpenAI targets. The original scenario page retains its applicant-provided resume introduction and fictional operating examples.
 
 This repository holds the Support Operations Lead demonstration. The [original Support Delivery Lead project](https://victorvictory88.github.io/Support-Delivery-Lead/) remains the primary public portfolio reference. Each project retains its own source history and deployment.
 
@@ -55,7 +57,7 @@ Albert supplied the metrics and confirmed audited pass rates for Quality, recomm
 
 ## Public hosting
 
-GitHub Actions runs the engine tests, syntax checks, and build before publishing `dist` to GitHub Pages. Relative asset links support the `/Support-Operations-Lead/` project path. The ChatGPT Site is a separately managed public copy.
+GitHub Actions runs the engine tests, syntax checks, and build before publishing `dist` to GitHub Pages. Relative asset links support the `/Support-Operations-Lead/` project path. The ChatGPT Site remains a separately managed copy of the earlier scenario demonstration. This take-home update targets GitHub Pages.
 
 ## Four operating decisions
 
