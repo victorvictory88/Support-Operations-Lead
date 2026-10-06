@@ -37,11 +37,11 @@ Every scenario, organization, operating figure, owner, record, and output is fic
 
 Onigiri answers bounded questions from selected page content and fixed topic rules. Questions remain in browser memory, and switching scenarios clears prior answers.
 
-## Candidate evidence and project isolation
+## Evidence and assumptions
 
 The recommendation uses Albert's confirmed Meta partner governance and Rowland AI workflow experience. Its growth rates, case-effort multiplier, and proposed 75% verified automated-resolution rate are planning assumptions, separate from OpenAI targets. The scenario page has no resume link or career introduction. Its sales and vendor examples demonstrate decision methods; the home page gives Support-specific measures.
 
-This repository holds the Support Operations Lead demonstration. The [original Support Delivery Lead project](https://victorvictory88.github.io/Support-Delivery-Lead/) remains the primary public portfolio reference. Each project retains its own source history and deployment.
+This repository contains the Support Operations Lead take-home and the separate fictional Operating Scenarios demonstration.
 
 ## Review material
 
