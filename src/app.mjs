@@ -2,7 +2,8 @@ import {SCENARIOS} from './scenarios.mjs';
 import {evaluate,answerGuide,formatDate} from './engine.mjs';
 const $=s=>document.querySelector(s);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let selected=SCENARIOS[0],result=evaluate(selected),step=0;
+const requestedCase=new URLSearchParams(location.search).get('case');
+let selected=SCENARIOS.find(s=>s.id===requestedCase)??SCENARIOS[0],result=evaluate(selected),step=0;
 const media=matchMedia('(prefers-reduced-motion: reduce)');
 const railElement=$('#rail');
 const mobileLayout=matchMedia('(max-width:800px)');
@@ -80,7 +81,7 @@ function frame(time){
  if(!paused&&!document.hidden){elapsed+=delta;if(elapsed>=STEP_MS){elapsed=0;step=(step+1)%result.trace.length;renderTrace();}updateFlow();}
  requestAnimationFrame(frame);
 }
-$('#cards').addEventListener('click',e=>{const card=e.target.closest('[data-scenario]');if(!card)return;selected=SCENARIOS.find(s=>s.id===card.dataset.scenario);render();$(`[data-scenario="${selected.id}"]`).focus({preventScroll:true});});
+$('#cards').addEventListener('click',e=>{const card=e.target.closest('[data-scenario]');if(!card)return;selected=SCENARIOS.find(s=>s.id===card.dataset.scenario);const url=new URL(location.href);url.searchParams.set('case',selected.id);history.replaceState(null,'',url);render();$(`[data-scenario="${selected.id}"]`).focus({preventScroll:true});});
 $('#motion').addEventListener('click',()=>{paused=!paused;updateMotion();});
 function updateMotion(){$('#motion').textContent=paused?'Resume trace':'Pause trace';$('#motion').setAttribute('aria-pressed',String(paused));$('.team').classList.toggle('paused',paused);$('#playback-state').textContent=paused?'Paused · proposed handoffs':'Sequential design playback';updateFlow();}
 media.addEventListener('change',e=>{if(e.matches){paused=true;updateMotion();}});

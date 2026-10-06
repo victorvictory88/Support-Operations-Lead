@@ -4,18 +4,18 @@
 
 The supplied take-home PDF sets the hypothetical one-billion-weekly-user, 150,000-issue, and 60% automated-resolution baseline. It asks for an outlook, strategic priorities, an operating model with vendors, and measures of success. The source PDF stays outside this public repository.
 
-The 1.5× user growth, 1.25× issue propensity, 1.3× human case effort, 75% proposed verified automated resolution, and 65% stress case are candidate planning assumptions. They are sensitivity inputs, not OpenAI forecasts or standards. The site and PDF show the arithmetic and use effort units because case handle time, shrinkage, and service windows are absent.
+The 1.5× user growth, 1.25× issue propensity, 1.3× human case effort, 75% proposed verified automated resolution, and 65% stress case are candidate planning assumptions. They are sensitivity inputs, not OpenAI forecasts or standards. The six-page site and PDF show the arithmetic and use effort units because case handle time, shrinkage, and service windows are absent. Quality, productivity, capacity, and cost are the four management lenses. The linked examples use fictional sales and vendor measures; the recommendation specifies Support measures.
 
 | Public source | Use in the recommendation |
 | --- | --- |
 | [OpenAI, Improving support with every interaction](https://openai.com/index/openai-support-model/) | Customer surfaces, knowledge, evaluations, frontline contribution, and product feedback |
 | [COPC CX Standard](https://www.copc.com/copc-standards/cx-standard/) | Service journeys, digital channels, metrics, and vendor-management structure |
 | [ISO 18295-2](https://www.iso.org/standard/64740.html) | Client responsibility for outsourced and in-house contact-centre arrangements |
-| [UK Sourcing Playbook](https://www.gov.uk/government/publications/the-sourcing-and-consultancy-playbooks/the-sourcing-playbook-html) | Outcome measures, phased pilots, contract governance, and supplier continuity |
+| [UK Sourcing Playbook](https://www.gov.uk/government/publications/the-sourcing-and-consultancy-playbooks/the-sourcing-playbook-html) | Background reading on outcome measures, pilots, contract governance, and supplier continuity |
 | [Brynjolfsson, Li, and Raymond, Generative AI at Work](https://www.nber.org/papers/w31161) | Study of 5,179 support agents and heterogeneous AI-assistance effects; no capacity gain imported into the exercise forecast |
 | [NIST AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) | Human oversight, monitoring, and recovery controls |
 
-Albert confirmed four years managing Meta BPO performance across five vendors and onshore and offshore programs. He also confirmed cross-market support in Google Japan and Korea product strategy and activation. Rowland AI workflow claims follow the approved career source. The page makes no support-service outcome claim from those roles.
+Albert confirmed four years managing Meta BPO performance across five vendors and onshore and offshore programs. He also confirmed cross-market support in Google Japan and Korea product strategy and activation. Rowland AI workflow claims follow the approved career source. The concise home page uses Meta and Rowland evidence. It makes no support-service outcome claim from those roles.
 
 ## Original operating scenarios
 
@@ -36,7 +36,7 @@ The private reference Site was visually inspected during the revision. Its full-
 
 ## Personal claim sources
 
-The applicant supplied `Albert-Chan-Resume-OpenAI-Support-Operations-Lead.pdf` on October 3, 2026. Page one documents Meta’s five vendor relationships, review cadences, and corrective action. It also documents Rowland workflow development with evaluations, tool integrations, and guardrails. Those two statements support the brief introduction, and the page adds no historical support-service outcomes.
+The applicant supplied `Albert-Chan-Resume-OpenAI-Support-Operations-Lead.pdf` on October 3, 2026. Page one documents Meta’s five vendor relationships, review cadences, and corrective action. It also documents Rowland workflow development with evaluations, tool integrations, and guardrails. The resume link and career introduction were removed from Operating Scenarios at Albert's request. The asset remains in repository history and is absent from the page navigation.
 
 ## Four-scenario revision
 
