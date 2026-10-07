@@ -14,7 +14,7 @@
 
 ## Draft
 
-The take-home follows situation, idea, how it works, benefit, and close. It uses Diagnose, Design, Deliver as the organizing method. The scenario assumptions and Year 1–3 path are labeled. The operating model gives each support layer a role, while the scorecard shows customer outcomes and contributor measures. The second tab remains a fictional demonstration.
+The take-home follows the assignment's four areas covering future scale, strategic priorities, future operating model, and measures of success. Diagnose, Design, Deliver describes my approach to the assignment. The strategic idea is an AI-led Support system that learns from every interaction. A line chart and supporting table show the Year 1–3 planning case with explicit assumptions. The operating model gives each support layer a role, while the scorecard shows customer outcomes and contributor measures. The second tab remains a fictional demonstration.
 
 ## Omitted unsupported claims
 

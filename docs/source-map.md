@@ -12,7 +12,7 @@ These factors estimate effort units. A staffing number would require observed ha
 
 ## External source
 
-[OpenAI's published support model](https://openai.com/index/openai-support-model/) informs the recommendation's connection between customer support surfaces, living knowledge, evaluations, and frontline feedback. The exercise supplies the hypothetical baseline, and my planning case supplies the multipliers.
+[OpenAI's published support model](https://openai.com/index/openai-support-model/) informs the recommendation's connection between customer support surfaces, living knowledge, evaluations, and frontline feedback. It also supplies Glen Worthington's quoted description of the purpose of Support. The exercise supplies the hypothetical baseline, and my planning case supplies the multipliers.
 
 ## Albert's experience and the demonstration
 

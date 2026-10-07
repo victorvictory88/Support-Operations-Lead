@@ -8,9 +8,9 @@ This repository contains my recommendation for the hypothetical OpenAI Support O
 
 ## The recommendation
 
-The assignment asks how Support should evolve over three years from a hypothetical baseline of 1 billion weekly users, 150,000 weekly issues, and 60% automated resolution. I organize the recommendation as a short presentation covering situation, idea, how it works, benefit, and close.
+The assignment asks how Support should evolve over three years from a hypothetical baseline of 1 billion weekly users, 150,000 weekly issues, and 60% automated resolution. I organize the recommendation around the assignment's four areas covering future scale, strategic priorities, operating model, and measures of success. My proposal uses AI to resolve approved routine issues, support people on complex cases, and improve guidance and product decisions after each interaction.
 
-The planning case shows Year 1, Year 2, and Year 3 demand, human cases, and effort. It explains the logic behind each assumption, the investments and trade-offs, the partner operating model, a customer-outcome scorecard, and an action plan with owners and illustrative readiness statuses. The only external research link in the recommendation is [OpenAI's published support model](https://openai.com/index/openai-support-model/).
+The planning case shows Year 1, Year 2, and Year 3 demand, human cases, and effort in a chart and a supporting table. It explains the logic behind each assumption, the investments and trade-offs, the partner operating model, a customer-outcome scorecard, and an action plan with owners and illustrative readiness statuses. The only external research link in the recommendation is [OpenAI's published support model](https://openai.com/index/openai-support-model/).
 
 The scorecard translates measures I used in Meta sales and vendor programs into appropriate Support measures. Those sales measures are distinct from OpenAI results. The figures for future growth and automation are scenario assumptions, separate from OpenAI targets.
 

@@ -10,3 +10,75 @@
 
 .metric-map{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px;margin-top:9px}.metric-map p{font-size:12px;line-height:1.45;margin:0;padding:6px 0;border-top:1px solid #d0e3d1}.metric-map strong{color:var(--teal)}@media(max-width:800px){.metric-map{grid-template-columns:1fr}}@media print{.metric-map{grid-template-columns:1fr 1fr!important}.metric-map p{font-size:10px!important;padding:4px 0!important}}
 @media print{.priority-grid p{font-size:13px!important}.priority-grid small{font-size:12px!important}.role-table p{font-size:13px!important}.measure-table th,.measure-table td{font-size:13px!important;padding:11px!important}.metric-map p{font-size:12px!important;padding:6px 0!important}.appendix-list p{font-size:14px!important;padding:11px 0!important}.appendix-source{font-size:14px!important}.roadmap p{font-size:13px!important}.action-plan th,.action-plan td{font-size:12px!important;padding:9px!important}}
+
+/* Four-area assignment presentation */
+.opener .lead strong{color:var(--forest);font-weight:700}
+.support-quote{margin:21px 0;padding:16px 23px;background:#f1f6ec;border-left:4px solid #74a686}
+.support-quote p{font-family:Georgia,"Times New Roman",serif;font-size:clamp(17px,1.55vw,22px);line-height:1.38;margin:0 0 8px}
+.support-quote footer{font-size:12px;font-weight:700;color:var(--teal)}
+.support-quote a{text-decoration:none}
+.approach{margin-top:18px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.approach>b{display:block;color:var(--teal);font-size:13px;margin-bottom:7px}
+.approach>div{display:flex;flex-wrap:wrap;gap:7px}
+.approach span{display:inline-block;background:#eaf2e8;border:1px solid #d2e5d4;border-radius:4px;padding:4px 8px;font-size:12px}
+.strategy-bucket{padding:22px 24px;background:#eaf4e9;border-left:4px solid var(--teal);margin:22px 0 26px}
+.strategy-bucket>strong{display:block;color:var(--teal);margin-bottom:10px}
+.strategy-bucket .strategy-pair{margin-top:0}
+.strategy-bucket .strategy-pair>div{background:#f7fbf5}
+.priority-grid article p+p{margin-top:9px}
+.priority-grid article p b{display:block;color:var(--teal);font-size:12px}
+.chart-card{padding:16px 20px 11px;margin:18px 0 7px;border:1px solid #cbdcce;background:linear-gradient(180deg,#f7fbf6,#f0f7ef);border-radius:7px}
+.chart-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+.chart-head h3{margin:0 0 2px;color:var(--forest);font-size:17px}
+.chart-head p{margin:0;font-size:12px;color:var(--muted)}
+.chart-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;font-weight:700;color:var(--forest);padding-top:5px}
+.chart-legend span{display:inline-flex;align-items:center;gap:7px}
+.chart-legend i{width:20px;height:3px;display:inline-block;border-radius:3px}
+.issue-key{background:#0b795f}.effort-key{background:#bf8a2c}
+.chart-scroll{max-width:100%;overflow-x:auto}
+.glide-chart{display:block;width:100%;min-width:660px;height:auto;max-height:250px;margin-top:5px}
+.chart-grid line{stroke:#cdded0;stroke-width:1;stroke-dasharray:4 5}
+.chart-axis text{fill:#5d7462;font:12px "Avenir Next",Arial,sans-serif}
+.chart-line{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.issues-line{stroke:#0b795f}.effort-line{stroke:#bf8a2c}
+.issues-dots circle{fill:#0b795f;stroke:#fff;stroke-width:2}
+.effort-dots circle{fill:#bf8a2c;stroke:#fff;stroke-width:2}
+.chart-end{font:700 15px "Avenir Next",Arial,sans-serif}
+.issue-end{fill:#0b795f}.effort-end{fill:#956617}
+.forecast-table thead{background:#f0f5ed}
+.forecast-table th,.forecast-table td{padding:8px 10px}
+.forecast-table tbody td{font-size:16px}
+.capacity-takeaway,.partner-note{padding:15px 20px;background:#eaf4e9;border-left:4px solid var(--teal);margin:19px 0}
+.capacity-takeaway b,.partner-note b{display:block;color:var(--teal);font-size:14px;margin-bottom:4px}
+.capacity-takeaway p,.partner-note p{font-size:14px;line-height:1.5;margin:0}
+.journey-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+.journey-strip>div{border:1px solid var(--line);border-top:3px solid var(--teal);background:#fff;padding:15px 16px}
+.journey-strip span{display:block;font:11px ui-monospace,monospace;color:var(--teal);margin-bottom:7px}
+.journey-strip b{font-size:14px}
+.journey-strip p{font-size:12px;line-height:1.45;margin:6px 0 0}
+.risk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:18px 0}
+.risk-grid>div{background:#f2f7f0;border-top:2px solid #9abea1;padding:11px 13px}
+.risk-grid b{font-size:13px}
+.risk-grid p{font-size:12px;line-height:1.45;margin:6px 0 0}
+@media(max-width:800px){.journey-strip,.risk-grid{grid-template-columns:1fr}.chart-head{display:block}.chart-legend{margin-top:8px}}
+@media print{
+ .opener .lead{font-size:16px!important}
+ .support-quote{margin:13px 0!important;padding:10px 17px!important}
+ .support-quote p{font-size:16px!important;line-height:1.28!important;margin-bottom:4px!important}
+ .support-quote footer{font-size:10px!important}
+ .approach{margin-top:9px!important;padding:7px 0!important}
+ .approach span{font-size:10px!important;padding:3px 7px!important}
+ .strategy-bucket{margin:14px 0!important;padding:13px 16px!important}
+ .chart-card{padding:8px 14px 2px!important;margin:9px 0 4px!important}
+ .chart-head h3{font-size:14px!important}
+ .chart-head p,.chart-legend{font-size:10px!important}
+ .glide-chart{height:1.67in!important;width:auto!important;max-height:none!important;min-width:0!important;margin:0 auto!important}
+ .forecast-table th,.forecast-table td{padding:5px 8px!important}
+ .forecast-table tbody td{font-size:13px!important}
+ .capacity-takeaway,.partner-note{margin:9px 0!important;padding:9px 13px!important}
+ .capacity-takeaway p,.partner-note p{font-size:12px!important}
+ .journey-strip,.risk-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important;margin:11px 0!important}
+ .journey-strip>div,.risk-grid>div{padding:9px 11px!important}
+ .journey-strip p,.risk-grid p{font-size:11px!important}
+ .role-table p{font-size:11px!important}
+}
