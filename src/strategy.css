@@ -509,8 +509,8 @@
  #financial .range-grid b{font-size:26px!important;margin:3px 0 5px!important}
  #financial .range-grid p{font-size:11px!important;line-height:1.35!important}
  #financial .finance-basis{font-size:11px!important;margin:5px 0!important}
- #financial .location-lever{padding:7px 11px!important;margin:7px 0!important}
- #financial .location-lever p{font-size:11px!important}
+ #appendix-financial .location-lever{padding:7px 11px!important;margin:7px 0!important}
+ #appendix-financial .location-lever p{font-size:11px!important}
  #financial .financial-decisions{grid-template-columns:1fr 1fr!important;gap:10px!important;margin:7px 0!important}
  #financial .financial-decisions>div{padding:9px 11px!important}
  #financial .financial-decisions b{font-size:12px!important}
@@ -545,8 +545,8 @@
  #financial .range-grid ul{font-size:12px!important;line-height:1.4!important}
  #financial .rollout-note{font-size:12px!important;line-height:1.4!important;margin:5px 0!important}
  #financial .finance-basis{font-size:13px!important}
- #financial .location-lever{padding:12px 15px!important}
- #financial .location-lever b,#financial .location-lever p{font-size:14px!important}
+ #appendix-financial .location-lever{padding:12px 15px!important}
+ #appendix-financial .location-lever b,#appendix-financial .location-lever p{font-size:14px!important}
  #financial .financial-decisions>div{padding:13px 16px!important}
  #financial .financial-decisions b{font-size:15px!important}
  #financial .financial-decisions ul{font-size:13px!important;line-height:1.42!important}
@@ -606,7 +606,7 @@
 #financial .range-grid .range-low{border:3px solid #bc6c61}
 #financial .range-grid .range-mid{border:3px solid #bd8d39}
 #financial .range-grid .range-high{border:3px solid var(--teal)}
-#financial .location-lever{border:2px solid var(--teal)}
+#appendix-financial .location-lever{border:2px solid var(--teal)}
 #financial .financial-decisions>div{border:3px solid var(--teal)}
 #financial .closing-quote{border:3px solid #74a686}
 #appendix-operations .journey-strip>div,#appendix-operations .appendix-measure-note{border:3px solid var(--teal)}

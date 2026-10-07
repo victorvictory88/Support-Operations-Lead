@@ -37,11 +37,11 @@ test('medium and high use one vendor baseline so AI progress explains the gap',(
 });
 
 test('low case shows loss if AI and vendor savings underperform',()=>{
-  assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.70,0.75]);
+  assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.70,0.70]);
   assert.equal(LOW_FINANCE.vendorCaseShare,HIGH_FINANCE.vendorCaseShare);
-  assert.equal(Math.round(LOW_FINANCE.totals.net),-11954518);
-  assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),125000);
-  assert.equal(Math.round(LOW_FINANCE.years[2].plannedVendorSeats),1950);
+  assert.equal(Math.round(LOW_FINANCE.totals.net),-13688458);
+  assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),150000);
+  assert.equal(Math.round(LOW_FINANCE.years[2].plannedVendorSeats),2340);
 });
 
 test('product improvement sensitivity lowers demand and the modeled savings',()=>{
