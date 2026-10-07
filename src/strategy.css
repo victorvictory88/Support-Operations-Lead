@@ -595,3 +595,18 @@
 #future .baseline{margin:4px 0 22px!important}
 .appendix-measure-note{margin:16px 0 0;padding:15px 18px;border-left:4px solid var(--teal);background:#eaf4e9;font-size:14px;line-height:1.5}
 .appendix-measure-note b{color:var(--teal)}
+
+/* Albert prefers a complete color border around emphasized cards. */
+#future .vision{border:3px solid var(--teal)}
+#future .recommendation-line{border:3px solid #63d49a}
+#demand .chart-card,#demand .metric-clarity>div{border:2px solid var(--teal)}
+#plan .plan-three article,#plan .compact-roadmap>div{border:2px solid var(--teal)}
+#plan .plan-traffic>div{border:3px solid currentColor}
+#plan .quarterly-check{border:3px solid var(--teal)}
+#financial .range-grid .range-low{border:3px solid #bc6c61}
+#financial .range-grid .range-mid{border:3px solid #bd8d39}
+#financial .range-grid .range-high{border:3px solid var(--teal)}
+#financial .location-lever{border:2px solid var(--teal)}
+#financial .financial-decisions>div{border:3px solid var(--teal)}
+#financial .closing-quote{border:3px solid #74a686}
+#appendix-operations .journey-strip>div,#appendix-operations .appendix-measure-note{border:3px solid var(--teal)}
