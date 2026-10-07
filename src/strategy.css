@@ -661,10 +661,10 @@
 #plan .plan-three .priority-budget{min-height:64px}
 #plan .plan-three article ul{flex:1}
 #plan .plan-three .priority-why{margin-top:16px}
-#financial .breakeven-note{font-size:13px;line-height:1.5;background:#edf6ed;border:2px solid var(--teal);padding:12px 15px;margin:14px 0}
-#financial .breakeven-note>b{display:block;color:var(--teal);font-size:15px;margin-bottom:5px}
-#financial .breakeven-note ul{margin:0;padding-left:20px}
-#financial .breakeven-note li+li{margin-top:5px}
+#appendix-financial .breakeven-note{font-size:13px;line-height:1.5;background:#edf6ed;border:2px solid var(--teal);padding:12px 15px;margin:14px 0}
+#appendix-financial .breakeven-note>b{display:block;color:var(--teal);font-size:15px;margin-bottom:5px}
+#appendix-financial .breakeven-note ul{margin:0;padding-left:20px}
+#appendix-financial .breakeven-note li+li{margin-top:5px}
 #financial .range-grid ul{font-size:13px;line-height:1.48}
 #financial .range-grid li+li{margin-top:8px}
 #financial .range-grid b{font-size:30px}
