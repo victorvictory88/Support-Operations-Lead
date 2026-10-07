@@ -278,6 +278,8 @@
 .compact-roadmap>div{background:#f0f6ee;border-top:3px solid var(--teal);padding:15px 16px}
 .compact-roadmap b{display:block;font-size:14px;color:var(--teal);margin-bottom:5px}
 .compact-roadmap p{font-size:13px;line-height:1.45;margin:0}
+.roadmap-proof{background:#eef6ee;border-left:4px solid var(--teal);padding:11px 15px;margin:0 0 18px;font-size:13px!important;line-height:1.5!important}
+.roadmap-proof b{color:var(--teal)}
 .decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
 .decision-grid>div{background:#eaf4e9;border-left:4px solid var(--teal);padding:16px 19px}
 .decision-grid b{display:block;color:var(--teal);font-size:15px}
