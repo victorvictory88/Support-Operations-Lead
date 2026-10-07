@@ -21,12 +21,14 @@ test('high case includes only budget savings and subtracts rollout spend',()=>{
   assert.equal(Math.round(HIGH_FINANCE.totals.vendorSavingsInBudget),137501442);
   assert.equal(Math.round(HIGH_FINANCE.totals.net),117501442);
   assert.equal(Math.round(HIGH_FINANCE.years[2].weeklyIssues*(1-HIGH_FINANCE.years[2].automationRate)),50000);
+  assert.deepEqual(HIGH_FINANCE.years.map(row=>Math.round(row.plannedVendorSeats)),[1030,927,780]);
+  assert.equal(Math.round(150000*0.40*52*FINANCE_ASSUMPTIONS.vendorCaseShare/FINANCE_ASSUMPTIONS.casesPerVendorRepYear),936);
 });
 
-test('medium case exposes the contract and vendor handling sensitivity',()=>{
-  assert.equal(MEDIUM_FINANCE.vendorEligibleShare,0.70);
+test('medium case exposes the budget and vendor handling sensitivity',()=>{
+  assert.equal(MEDIUM_FINANCE.vendorCaseShare,0.70);
   assert.equal(MEDIUM_FINANCE.casesPerVendorRepYear,4000);
-  assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.contractRealization),[0.25,0.50,0.75]);
+  assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.budgetSavingsRate),[0.25,0.50,0.75]);
   assert.equal(Math.round(MEDIUM_FINANCE.totals.net),42427620);
 });
 
@@ -37,7 +39,7 @@ test('low case shows loss if AI and vendor savings underperform',()=>{
 });
 
 test('smaller vendor ownership lowers savings without changing case count',()=>{
-  const half=calculateFinance(FINANCE_ASSUMPTIONS,{vendorEligibleShare:0.50});
+  const half=calculateFinance(FINANCE_ASSUMPTIONS,{vendorCaseShare:0.50});
   assert.ok(half.totals.net<HIGH_FINANCE.totals.net);
   assert.deepEqual(half.years.map(row=>row.weeklyIssues),HIGH_FINANCE.years.map(row=>row.weeklyIssues));
 });

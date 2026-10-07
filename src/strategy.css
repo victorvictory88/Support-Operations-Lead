@@ -446,6 +446,7 @@
 .compact-roadmap>div{padding:12px 13px}
 .compact-roadmap ul{font-size:12px;line-height:1.42;margin:6px 0 0;padding-left:17px}
 .compact-roadmap li+li{margin-top:5px}
+.roadmap-note{font-size:11px!important;line-height:1.4!important;color:var(--muted);margin:-7px 0 10px!important}
 .quarterly-check{background:#eaf4e9;border-left:4px solid var(--teal);padding:13px 17px;margin:16px 0 0}
 .quarterly-check>b{display:block;color:var(--teal);font-size:15px;margin-bottom:8px}
 .quarterly-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
@@ -498,6 +499,7 @@
  #plan .compact-roadmap>div{padding:11px 12px!important}
  #plan .compact-roadmap b{font-size:14px!important}
  #plan .compact-roadmap ul{font-size:12px!important;line-height:1.35!important}
+ #plan .roadmap-note{font-size:10px!important;line-height:1.3!important;margin:-5px 0 6px!important}
  #plan .quarterly-check{padding:10px 14px!important;margin-top:12px!important}
  #plan .quarterly-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
  #plan .quarterly-grid p{font-size:11px!important;line-height:1.35!important}
@@ -531,6 +533,7 @@
  #plan .compact-roadmap>div{padding:15px 16px!important}
  #plan .compact-roadmap b{font-size:17px!important}
  #plan .compact-roadmap ul{font-size:14px!important;line-height:1.43!important}
+ #plan .roadmap-note{font-size:12px!important;line-height:1.35!important;margin:-7px 0 6px!important}
  #plan .quarterly-check{padding:14px 17px!important}
  #plan .quarterly-check>b{font-size:18px!important}
  #plan .quarterly-grid p{font-size:14px!important;line-height:1.42!important}
