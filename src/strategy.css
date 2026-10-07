@@ -622,3 +622,21 @@
 #plan .plan-three .priority-why{border-top:1px solid #d1e0d4;padding-top:10px;margin-top:13px;font-size:13px;line-height:1.42}
 #plan .plan-three .priority-why>b{display:block;color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
 @media(max-width:600px){#future .recommendation-head{grid-template-columns:1fr}#future .recommendation-head>span{grid-column:1;grid-row:auto;max-width:none;margin-top:6px}}
+
+/* Clarify the opening, staffing path, and recurring investment split. */
+#future h1{font-size:clamp(39px,4vw,59px);line-height:1.08;max-width:950px}
+#future .recommendation-head{grid-template-columns:1fr}
+#future .recommendation-head>strong{grid-column:1}
+#demand .volume-row small em{display:inline-block;margin-left:9px;padding:2px 7px;border:1px solid #b8d4bf;border-radius:3px;background:#edf5e9;color:#1b5f43;font-style:normal;font-weight:750;white-space:nowrap}
+#demand .chart-staff-note{font-size:12px;line-height:1.4;color:var(--muted);margin:10px 0 0}
+#plan .plan-three .priority-budget{display:block;margin:8px 0 11px;padding:8px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.25}
+#plan .plan-three .priority-budget strong{display:block;color:var(--teal);font:700 28px/1.1 Georgia,serif}
+#plan .plan-three .priority-budget small{display:block;color:var(--muted);font-size:11px;line-height:1.35;margin-top:3px}
+#plan .investment-note{font-size:12px;line-height:1.45;color:var(--muted);margin:-6px 0 17px}
+#plan .scorecard-note{border-top:2px dotted #8fb9a0;padding-top:10px;margin-top:13px}
+#appendix-operations .embedded-specialist{border:3px solid var(--teal);background:#edf6ed;padding:17px 20px;margin:17px 0}
+#appendix-operations .embedded-specialist>b{display:block;color:var(--teal);font-size:16px;margin-bottom:7px}
+#appendix-operations .embedded-specialist ul{font-size:14px;line-height:1.5;margin:0;padding-left:20px}
+#appendix-operations .embedded-specialist li+li{margin-top:4px}
+#appendix-operations .embedded-specialist p{font-size:13px;line-height:1.45;margin:9px 0 0}
+@media(max-width:540px){#future h1{font-size:38px}#demand .volume-row small em{margin:3px 0 0}}
