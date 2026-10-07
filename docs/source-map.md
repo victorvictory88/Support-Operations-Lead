@@ -14,7 +14,7 @@ The 90% stretch rate is conditional on the issue mix. Total automated resolution
 
 Product and Engineering would connect account context, approved guidance, and limited AI actions. Trust & Safety would approve sensitive action boundaries. Support Delivery would train and check partner teams for defined queues and human handoffs. Operations would retain one issue ID, sample outcomes, and send recurring failures into quality tests and Product fixes. A severe privacy, policy, or access error stops the affected AI action. The current route remains available for impacted issues.
 
-The quarterly scorecard compares similar issue types across AI, partners, and specialists. Automated resolution, partner quality and SLA, specialist outcomes, repeat contact, backlog, and confirmed vendor spend are reported separately. A rising related-contact rate pauses expansion. Missed SLA or backlog targets pause staffing reductions. Quarterly vendor reviews produce a named gap-to-goal plan where targets are missed.
+The quarterly scorecard compares similar issue types across AI, partners, and specialists. Automated resolution, partner quality and SLA, specialist outcomes, repeat contact, backlog, and confirmed vendor spend are reported separately. During pilots, comparable issues on the current route help estimate the new route's contribution. A severe privacy, policy, or access error stops the affected route. Two weeks with related contact more than two points above baseline are a proposed pause threshold, not an OpenAI standard. Missed SLA or backlog targets pause staffing reductions. Quarterly vendor reviews produce a named gap-to-goal plan where targets are missed.
 
 ## External source
 
