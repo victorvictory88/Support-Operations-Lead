@@ -29,6 +29,8 @@ The comparison keeps AI resolution at 60% as issue demand grows. In each year, e
 
 The high case saves $137.5M in vendor costs against the comparison forecast and subtracts $20M in AI and rollout spending. Its yearly net figures are +$2.1M, +$31.8M, and +$83.6M. This is future expense saved against a growing-demand forecast. Today's vendor bill could still increase.
 
+The $20M spending figure is an illustrative planning assumption, with $4M in Year 1, $6M in Year 2, and $10M in Year 3. It covers AI use, tools, training, evaluations, and quality checks. Finance would price the two pilots and set a capped initial budget before committing to broader spending.
+
 ## Funding and controls
 
 I would seek a capped first-stage budget and use the first 90 days to confirm issue ownership, contract terms, case handling time, AI costs, and current customer outcomes. Pilot targets are 10% fewer eligible cases reaching people, a five-point improvement in durable resolution, and zero severe AI errors. Later funding would require repeat contact and backlog age at or below baseline, plus vendor savings that Finance confirms can reach a budget. A severe AI error stops the affected action and sends those cases to people. These are proposed planning gates, separate from OpenAI commitments.
