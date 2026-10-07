@@ -437,6 +437,7 @@
 .help-tip{display:inline-grid;place-items:center;width:17px;height:17px;border:1px solid #87b49a;border-radius:50%;background:#eef8ed;color:#0b795f;font:700 11px/1 ui-sans-serif,sans-serif;vertical-align:middle;cursor:help;margin-left:3px;white-space:nowrap}
 .help-tip:hover,.help-tip:focus-visible{background:#0b795f;color:white;outline:2px solid #9ad4af;outline-offset:1px}
 .plan-three{margin:17px 0}
+.plan-intro{font-size:14px;line-height:1.48;margin:10px 0}
 .plan-three article{min-height:0}
 .plan-three p{font-size:13px}
 .plan-three ul{font-size:13px;line-height:1.45;margin:9px 0 0;padding-left:18px}
@@ -451,6 +452,7 @@
 .quarterly-grid p{border-top:1px solid #bfd7c5;margin:0;padding-top:7px;font-size:12px;line-height:1.4}
 .quarterly-grid strong{display:block;color:var(--forest);margin-bottom:3px}
 .quarterly-grid span{color:#405e4d}
+.scorecard-note{font-size:12px;line-height:1.42;margin:9px 0 0;color:#254c39}
 .finance-intro{font-size:14px!important;line-height:1.48!important}
 .range-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:17px 0 10px}
 .range-grid article{border:1px solid var(--line);background:#f1f7f0;border-top:4px solid #a4bca8;padding:14px 16px}
@@ -484,6 +486,9 @@
 @media(max-width:800px){.quarterly-grid{grid-template-columns:1fr 1fr}.range-grid{grid-template-columns:1fr}.location-lever{grid-template-columns:1fr;gap:2px}}
 @media(max-width:540px){.volume-row{grid-template-columns:45px minmax(0,1fr) 40px;gap:2px 6px}.volume-bar .automated,.volume-bar .human{font-size:9px}.quarterly-grid{grid-template-columns:1fr}.range-grid b{font-size:30px}}
 @media print{
+ .help-tip,.term-tooltip{display:none!important}
+ #plan .plan-intro{font-size:14px!important;line-height:1.4!important;margin:7px 0!important}
+ #plan .scorecard-note{font-size:12px!important;line-height:1.35!important;margin:6px 0 0!important}
  #plan>p{font-size:14px!important}
  #plan .plan-three{gap:12px!important;margin:14px 0!important}
  #plan .plan-three article{padding:12px 14px!important}
@@ -515,6 +520,7 @@
  #appendix-operations .appendix-traffic{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 }
 .metric-clarity .help-tip{display:inline-grid!important;vertical-align:middle}
+@media print{.metric-clarity .help-tip{display:none!important}}
 .term-tooltip{position:fixed;z-index:50;width:min(310px,calc(100vw - 20px));padding:10px 12px;background:#123f32;color:#f5fff5;border-radius:6px;box-shadow:0 8px 25px #17392e55;font-size:12px;line-height:1.4;pointer-events:none}
 .term-tooltip[hidden]{display:none}
 @media print{

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {FINANCE_ASSUMPTIONS,HIGH_FINANCE,MEDIUM_FINANCE,LOW_FINANCE,calculateFinance} from '../src/finance.mjs';
+import {FINANCE_ASSUMPTIONS,HIGH_FINANCE,MEDIUM_FINANCE,LOW_FINANCE,HIGH_DOUBLE_THROUGHPUT,HIGH_RISING_BASELINE,calculateFinance} from '../src/finance.mjs';
 
 test('public vendor prices and the blended location mix reconcile',()=>{
   assert.equal(HIGH_FINANCE.annualOnshore,93600);
@@ -40,4 +40,10 @@ test('smaller vendor ownership lowers savings without changing case count',()=>{
   const half=calculateFinance(FINANCE_ASSUMPTIONS,{vendorEligibleShare:0.50});
   assert.ok(half.totals.net<HIGH_FINANCE.totals.net);
   assert.deepEqual(half.years.map(row=>row.weeklyIssues),HIGH_FINANCE.years.map(row=>row.weeklyIssues));
+});
+
+test('higher vendor throughput and rising baseline narrow the high case',()=>{
+  assert.equal(Math.round(HIGH_DOUBLE_THROUGHPUT.totals.net),48750721);
+  assert.deepEqual(HIGH_RISING_BASELINE.years.map(row=>row.comparisonAutomationRate),[0.65,0.68,0.70]);
+  assert.equal(Math.round(HIGH_RISING_BASELINE.totals.net),69505983);
 });

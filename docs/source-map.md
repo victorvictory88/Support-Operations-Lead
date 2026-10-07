@@ -6,9 +6,9 @@ The supplied take-home PDF sets a hypothetical starting point of 1 billion weekl
 
 ## Planning assumptions
 
-The recommendation uses matching factors for weekly users and issues per user. Both factors reach 1.21×, 1.48×, and 1.83× across Years 1–3, producing 220,000, 330,000, and 500,000 weekly issues when calculated with unrounded values. Verified AI resolution rises from the exercise's 60% starting point to 70%, 82%, and 90% in the stretch path. The 90% case leaves 10% of weekly issues for people in Year 3, or 50,000 cases. The slower 82% path leaves 90,000 cases for people. These are exercise assumptions, separate from OpenAI targets.
+The stretch scenario assumes 1.25 billion, 1.5 billion, and 2 billion weekly users across Years 1–3. It pairs those figures with 1.76, 2.2, and 2.5 weekly issues per 10,000 users, producing 220,000, 330,000, and 500,000 weekly issues. Verified AI resolution rises from the exercise's 60% starting point to 70%, 82%, and 90% in the stretch path. The 90% case leaves 10% of weekly issues for people in Year 3, or 50,000 cases. The slower 82% path leaves 90,000 cases for people. These are exercise assumptions, separate from OpenAI targets.
 
-The chart shows the share and count handled by AI and people, while backlog remains outside the chart. The recommendation keeps human coverage during the Year 1 increase in cases reaching people and changes vendor seats only after observed demand, customer outcomes, coverage, and contract terms support the decision. The proposed invoice lookup and product guidance pilots use illustrative Day 90 gates of a five-point durable-resolution gain, 10% fewer eligible cases reaching people, and zero severe AI errors.
+The chart shows the share and count handled by AI and people, while backlog remains outside the chart. The recommendation keeps human coverage during the Year 1 increase in cases reaching people and changes vendor seats only after the agreed Service Level Agreement target and coverage hold. The proposed invoice lookup and product guidance pilots use illustrative Day 90 gates of a five-point durable-resolution gain, 10% fewer eligible cases reaching people, and zero severe AI errors within those pilots.
 
 ## External source
 
@@ -22,4 +22,4 @@ The additional operating scenarios use fictional organizations, people, dates, g
 
 ## Financial decision case
 
-The [financial model notes](financial-model.md) document public vendor prices, the exercise comparison, all illustrative inputs, the $117.5M high case, the $42.4M medium case, and the $13.1M low-case shortfall. The [calculation module](../src/finance.mjs) produces the unrounded figures. The model estimates vendor cost saved against a flat-automation forecast and leaves revenue and customer retention outside the dollar estimate.
+The [financial model notes](financial-model.md) document public vendor prices, the exercise comparison, all illustrative inputs, the $117.5M high case, the $42.4M medium case, and the $13.1M low-case shortfall. They also show $48.8M with doubled vendor throughput and $69.5M if comparison automation improves. The [calculation module](../src/finance.mjs) produces the unrounded figures. The model estimates vendor cost saved against a flat-automation forecast and leaves revenue and customer retention outside the dollar estimate.
