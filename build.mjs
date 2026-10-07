@@ -1,8 +1,10 @@
 import {mkdir, cp, writeFile} from 'node:fs/promises';
 import {SCENARIOS} from './src/scenarios.mjs';
 import {evaluate} from './src/engine.mjs';
+import {BASE_FINANCE,UPSIDE_FINANCE,HYPERGROWTH_FINANCE,HYPERGROWTH_DOWNSIDE_FINANCE,SLOW_FINANCE,FINANCE_ASSUMPTIONS} from './src/finance.mjs';
 await mkdir('dist', {recursive:true});
 await cp('src', 'dist', {recursive:true});
 await cp('docs', 'dist/docs', {recursive:true});
 await writeFile('dist/build-report.json', JSON.stringify({scenarios:SCENARIOS.map(s=>({id:s.id,decision:evaluate(s).decision,review:evaluate(s).review})),engine:'deterministic',generatedAt:new Date().toISOString()},null,2));
+await writeFile('dist/financial-model.json', JSON.stringify({assumptions:FINANCE_ASSUMPTIONS,plan:HYPERGROWTH_FINANCE,planDownside:HYPERGROWTH_DOWNSIDE_FINANCE,lowerDemandBase:BASE_FINANCE,lowerDemandUpside:UPSIDE_FINANCE,lowerDemandDownside:SLOW_FINANCE},null,2));
 console.log(`Built ${SCENARIOS.length} scenarios and static assets into dist.`);

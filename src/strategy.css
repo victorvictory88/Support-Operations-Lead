@@ -302,8 +302,43 @@
 .compact-forecast tbody td{font-size:15px}
 #appendix-assumptions .appendix-list{margin-top:17px}
 #appendix-measures .appendix-list{margin-top:13px}
+.financial-opportunity{display:grid;grid-template-columns:250px 1fr;align-items:center;gap:24px;padding:18px 23px;margin:16px 0;background:#e4f2e7;border:1px solid #a8ceb4}
+.financial-opportunity span{display:block;font:11px ui-monospace,monospace;letter-spacing:.08em;color:var(--teal)}
+.financial-opportunity strong{display:block;font:700 54px/1 Georgia,serif;color:var(--forest);margin-top:4px}
+.financial-opportunity p{font-size:14px;line-height:1.5;margin:0}
+.finance-hero{display:grid;grid-template-columns:1fr 1.05fr;gap:14px;margin:22px 0 14px}
+.finance-total{background:#123f32;color:#f4fbf2;padding:20px 24px}
+.finance-total span,.finance-rates span{display:block;font:11px ui-monospace,monospace;letter-spacing:.08em}
+.finance-total strong{display:block;font:700 clamp(40px,4vw,58px)/1.08 Georgia,serif;margin:6px 0}
+.finance-total p{font-size:13px;line-height:1.45;margin:0;color:#d6eadb}
+.finance-bridge{display:flex;align-items:center;justify-content:space-around;gap:12px;border:1px solid var(--line);background:#f1f8ef;padding:16px}
+.finance-bridge div{flex:1}
+.finance-bridge b{display:block;font-size:clamp(23px,2.5vw,36px);line-height:1.12}
+.finance-bridge span{font-size:12px;color:var(--muted)}
+.finance-bridge i{font-style:normal;font-size:29px;color:var(--teal)}
+.finance-rates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 16px}
+.finance-rates>div{border:1px solid var(--line);padding:12px 17px;background:#fff}
+.finance-rates span{color:var(--teal)}
+.finance-rates b{display:block;font-size:20px;margin:3px 0}
+.finance-rates small{display:block;font-size:12px;color:var(--muted)}
+.finance-table{width:100%;border-collapse:collapse;text-align:left}
+.finance-table th,.finance-table td{border-bottom:1px solid var(--line);padding:10px 12px;vertical-align:top;font-size:13px}
+.finance-table thead th{background:#e4eee4;color:var(--forest);font:11px ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase}
+.finance-table tbody th{font-weight:700;color:var(--forest)}
+.finance-table tbody tr:last-child{background:#eef6ee;font-weight:700}
+.finance-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.finance-choice>div{padding:13px 17px;border-left:4px solid var(--teal);background:#e8f4e9}
+.finance-choice>div+div{border-color:#ba8a2e;background:#fbf3e6}
+.finance-choice b{font:11px ui-monospace,monospace;letter-spacing:.08em;color:var(--teal)}
+.finance-choice>div+div b{color:#896320}
+.finance-choice p{font-size:13px;line-height:1.48;margin:4px 0 0}
+#financial .source-note{margin:10px 0 0}
+#appendix-financial .finance-table th:first-child{width:21%}
+#appendix-financial .finance-table td:nth-child(2){width:19%}
+#appendix-financial .appendix-list{margin-top:12px}
 @media(max-width:800px){.metric-clarity,.decision-grid{grid-template-columns:1fr}.compact-roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:540px){.compact-roadmap{grid-template-columns:1fr}.metric-clarity b{font-size:20px}.reference-appendix>summary{padding:20px}}
+@media(max-width:800px){.finance-hero,.finance-choice{grid-template-columns:1fr}}
+@media(max-width:540px){.compact-roadmap,.finance-rates,.financial-opportunity{grid-template-columns:1fr}.financial-opportunity{gap:8px;padding:16px}.financial-opportunity strong{font-size:48px}.metric-clarity b{font-size:20px}.reference-appendix>summary{padding:20px}.finance-table th,.finance-table td{padding:7px;font-size:11px}.finance-table thead th{font-size:9px}}
 @media print{
  .reference-appendix{background:white!important}
  .reference-appendix>summary{display:none!important}
@@ -316,6 +351,9 @@
  #future .vision p{font-size:14px!important}
  #future .recommendation-line{padding:12px 16px!important;margin:12px 0!important}
  #future .recommendation-line p{font-size:14px!important;line-height:1.38!important}
+ #future .financial-opportunity{grid-template-columns:260px 1fr!important;padding:13px 18px!important;margin:11px 0!important}
+ #future .financial-opportunity strong{font-size:52px!important}
+ #future .financial-opportunity p{font-size:14px!important}
  #future .source-note{font-size:11px!important}
  #demand .metric-clarity{gap:12px!important;margin:12px 0!important}
  #demand .metric-clarity>div{padding:12px 15px!important}
@@ -367,4 +405,26 @@
  #appendix-measures .contribution p{font-size:13px!important}
  #appendix-measures .appendix-list p{font-size:13px!important;padding:8px 0!important}
  #appendix-measures .appendix-source{font-size:13px!important}
+ #financial>p{font-size:16px!important;line-height:1.43!important}
+ #financial .finance-hero{margin:16px 0 10px!important}
+ #financial .finance-total{padding:17px 21px!important}
+ #financial .finance-total strong{font-size:52px!important}
+ #financial .finance-total p{font-size:14px!important}
+ #financial .finance-bridge{padding:14px!important}
+ #financial .finance-bridge b{font-size:32px!important}
+ #financial .finance-bridge span{font-size:13px!important}
+ #financial .finance-rates{margin:9px 0 11px!important}
+ #financial .finance-rates>div{padding:10px 16px!important}
+ #financial .finance-rates b{font-size:21px!important}
+ #financial .finance-table th,#financial .finance-table td{font-size:14px!important;padding:9px 12px!important}
+ #financial .finance-table thead th{font-size:12px!important}
+ #financial .finance-choice{margin:13px 0!important}
+ #financial .finance-choice>div{padding:11px 15px!important}
+ #financial .finance-choice p{font-size:14px!important}
+ #financial .source-note{font-size:11px!important}
+ #appendix-financial h2{font-size:34px!important}
+ #appendix-financial .finance-table th,#appendix-financial .finance-table td{font-size:12px!important;line-height:1.35!important;padding:7px 9px!important}
+ #appendix-financial .finance-table thead th{font-size:10px!important}
+ #appendix-financial .appendix-list p{font-size:12px!important;line-height:1.36!important;padding:7px 0!important}
+ #appendix-financial .appendix-source{font-size:12px!important;line-height:1.4!important}
 }

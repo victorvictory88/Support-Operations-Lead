@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build.mjs",
     "test": "node --test tests/*.test.mjs",
-    "lint": "node --check src/app.mjs && node --check src/engine.mjs && node --check src/scenarios.mjs && node --check src/strategy.mjs && node --check build.mjs",
+    "lint": "node --check src/app.mjs && node --check src/engine.mjs && node --check src/scenarios.mjs && node --check src/strategy.mjs && node --check src/finance.mjs && node --check build.mjs",
     "preview": "python3 -m http.server 4176 --bind 127.0.0.1 --directory dist"
   }
 }
