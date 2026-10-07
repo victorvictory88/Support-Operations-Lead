@@ -11,7 +11,7 @@ export const FINANCE_ASSUMPTIONS=Object.freeze({
   existingAutomationRate:0.60,
   years:[
     {year:1,weeklyIssues:220000,automationRate:0.70,budgetSavingsRate:0.40,programCost:4000000},
-    {year:2,weeklyIssues:330000,automationRate:0.80,budgetSavingsRate:0.75,programCost:6000000},
+    {year:2,weeklyIssues:330000,automationRate:0.80,casesPerVendorRepYear:3300,budgetSavingsRate:0.75,programCost:6000000},
     {year:3,weeklyIssues:500000,automationRate:0.90,budgetSavingsRate:0.90,programCost:10000000}
   ]
 });
@@ -21,8 +21,9 @@ export function calculateFinance(assumptions=FINANCE_ASSUMPTIONS,overrides={}){
   const annualOffshore=assumptions.offshoreMonthlyBill*12;
   const blendedAnnual=annualOnshore*assumptions.onshoreVendorShare+annualOffshore*assumptions.offshoreVendorShare;
   const vendorCaseShare=overrides.vendorCaseShare??assumptions.vendorCaseShare;
-  const casesPerVendorRepYear=overrides.casesPerVendorRepYear??assumptions.casesPerVendorRepYear;
+  const defaultCasesPerVendorRepYear=overrides.casesPerVendorRepYear??assumptions.casesPerVendorRepYear;
   const years=assumptions.years.map((input,index)=>{
+    const casesPerVendorRepYear=overrides.casesPerVendorRepYear??input.casesPerVendorRepYear??assumptions.casesPerVendorRepYear;
     const weeklyIssues=overrides.weeklyIssues?.[index]??input.weeklyIssues;
     const automationRate=overrides.automationRates?.[index]??input.automationRate;
     const comparisonAutomationRate=overrides.comparisonAutomationRates?.[index]??assumptions.existingAutomationRate;
@@ -34,10 +35,10 @@ export function calculateFinance(assumptions=FINANCE_ASSUMPTIONS,overrides={}){
     const comparisonVendorSeats=weeklyIssues*(1-comparisonAutomationRate)*assumptions.weeksPerYear*vendorCaseShare/casesPerVendorRepYear;
     const potentialVendorSavings=vendorRepYears*blendedAnnual;
     const vendorSavingsInBudget=potentialVendorSavings*budgetSavingsRate;
-    return {year:input.year,weeklyIssues,automationRate,comparisonAutomationRate,savedWeeklyCases,vendorRepYears,plannedVendorSeats,comparisonVendorSeats,potentialVendorSavings,budgetSavingsRate,vendorSavingsInBudget,programCost,net:vendorSavingsInBudget-programCost};
+    return {year:input.year,weeklyIssues,automationRate,comparisonAutomationRate,casesPerVendorRepYear,savedWeeklyCases,vendorRepYears,plannedVendorSeats,comparisonVendorSeats,potentialVendorSavings,budgetSavingsRate,vendorSavingsInBudget,programCost,net:vendorSavingsInBudget-programCost};
   });
   const totals=years.reduce((sum,row)=>({potentialVendorSavings:sum.potentialVendorSavings+row.potentialVendorSavings,vendorSavingsInBudget:sum.vendorSavingsInBudget+row.vendorSavingsInBudget,programCost:sum.programCost+row.programCost,net:sum.net+row.net}),{potentialVendorSavings:0,vendorSavingsInBudget:0,programCost:0,net:0});
-  return {annualOnshore,annualOffshore,blendedAnnual,vendorCaseShare,casesPerVendorRepYear,years,totals};
+  return {annualOnshore,annualOffshore,blendedAnnual,vendorCaseShare,casesPerVendorRepYear:defaultCasesPerVendorRepYear,years,totals};
 }
 
 export const HIGH_FINANCE=calculateFinance();
