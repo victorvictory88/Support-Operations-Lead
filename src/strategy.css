@@ -610,3 +610,15 @@
 #financial .financial-decisions>div{border:3px solid var(--teal)}
 #financial .closing-quote{border:3px solid #74a686}
 #appendix-operations .journey-strip>div,#appendix-operations .appendix-measure-note{border:3px solid var(--teal)}
+
+/* Make the investment case readable at presentation distance. */
+#future .recommendation-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 18px;align-items:end;padding-bottom:11px;border-bottom:1px solid #4b8169}
+#future .recommendation-head>b{grid-column:1;margin:0;color:#b6e9c7;font-size:13px;text-transform:uppercase;letter-spacing:.07em}
+#future .recommendation-head>strong{grid-column:1;font:700 clamp(30px,3.5vw,46px)/1.05 Georgia,serif;color:#fff}
+#future .recommendation-head>span{grid-column:2;grid-row:1 / span 2;max-width:280px;color:#d9efe0;font-size:12px;line-height:1.4}
+#future .recommendation-line ol{margin-top:14px}
+#future .recommendation-line li{padding-left:3px}
+#future .recommendation-line li>b{display:inline;color:#a5e9bf;font-size:inherit;margin:0}
+#plan .plan-three .priority-why{border-top:1px solid #d1e0d4;padding-top:10px;margin-top:13px;font-size:13px;line-height:1.42}
+#plan .plan-three .priority-why>b{display:block;color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+@media(max-width:600px){#future .recommendation-head{grid-template-columns:1fr}#future .recommendation-head>span{grid-column:1;grid-row:auto;max-width:none;margin-top:6px}}
