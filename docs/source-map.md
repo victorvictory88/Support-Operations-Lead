@@ -6,9 +6,9 @@ The supplied take-home PDF sets a hypothetical starting point of 1 billion weekl
 
 ## Planning assumptions
 
-The recommendation uses illustrative Year 3 factors of 1.5× weekly users, 1.25× issues per user, and 1.3× human effort per case. The logic is that a larger user base raises demand, more products and business use cases can raise issue frequency, and automation can remove easier issues before a person handles the remaining queue. Year 1 and Year 2 interpolate that path. The 75% verified automated-resolution rate is a scenario outcome for analysis, separate from any OpenAI target.
+The recommendation uses illustrative Year 3 factors of 1.5× weekly users, 1.25× issues per user, and 1.3× human effort per case. The logic is that a larger user base raises demand, more products and business use cases can raise issue frequency, and automation can remove easier issues before a person handles the remaining queue. Year 1 and Year 2 interpolate that path. The 75% verified automated-resolution rate is a scenario outcome for analysis, separate from any OpenAI target. The chart depicts automated resolution and human assistance; backlog remains outside its scope.
 
-These factors estimate effort units. A staffing number would require observed handle time by issue type, qualified hours, occupancy, shrinkage, and service windows.
+These factors estimate effort units. A staffing number would require observed handle time by issue type, qualified hours, occupancy, shrinkage, and service windows. Proposed pilots for invoice or receipt lookup and product how-to guidance require a Day 30 volume and risk review. The Day 90 targets of a 5-point durable-resolution gain, 10% lower human effort per eligible issue, and zero severe errors are illustrative gates, separate from OpenAI commitments.
 
 ## External source
 
@@ -16,6 +16,6 @@ These factors estimate effort units. A staffing number would require observed ha
 
 ## Albert's experience and the demonstration
 
-Albert supplied four years of Meta BPO management across five onshore and offshore vendor partners, plus Meta scorecard measures for coverage, quality, workforce, sales funnel, and Ads AI adoption. The recommendation translates those measures into Support equivalents and keeps business revenue as context. It makes no historical OpenAI Support performance claim.
+Albert supplied four years of Meta BPO management across five onshore and offshore vendor partners, plus Meta scorecard measures for coverage, quality, workforce, sales funnel, and Ads AI adoption. The recommendation uses relevant measures inside four Support operating lenses and keeps business revenue as prioritization context. It makes no historical OpenAI Support performance claim.
 
 The additional operating scenarios use fictional organizations, people, dates, goals, and records. One deterministic browser engine calculates their recommendations, and the visual agent chart replays proposed handoffs. The guide gives fixed answers from page content.
