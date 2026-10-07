@@ -53,6 +53,7 @@
 .volume-bar .automated{background:#0b795f}
 .volume-bar .human{background:#bd8d39}
 .chart-takeaway{font-size:13px;line-height:1.45;margin:11px 0 0;padding:9px 11px;background:#e5f2e5;color:var(--forest)}
+.chart-takeaway b{display:block;margin-bottom:2px}
 .issue-key{background:#0b795f}.effort-key{background:#bf8a2c}
 .chart-scroll{max-width:100%;overflow-x:auto}
 .glide-chart{display:block;width:100%;min-width:660px;height:auto;max-height:250px;margin-top:5px}
