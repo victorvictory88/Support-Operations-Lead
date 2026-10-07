@@ -14,7 +14,7 @@
 
 ## Draft
 
-The take-home follows the assignment's four areas covering future scale, strategic priorities, future operating model, and measures of success. Diagnose, Design, Deliver describes my approach to the assignment. The strategic idea is an AI-led Support system that learns from every interaction. A stacked volume chart shows the Year 1–3 split between automated resolution and human assistance, while the table shows human effort. The scorecard uses quality, productivity, capacity, and cost to serve. The two pilot journeys and Day 90 targets are labeled as illustrative. The second tab remains a fictional demonstration.
+The take-home follows the assignment's four areas covering future scale, strategic priorities, future operating model, and measures of success. Diagnose, Design, Deliver describes my approach to the assignment. The strategic idea is an AI-led Support system that prevents repeat issues and resolves approved needs inside the product while people govern risk and improve the system. A stacked volume chart shows the Year 1–3 split between automated resolution and human assistance. The adjacent capacity and capability boxes explain the effort threshold and conditions for lower human workload. The scorecard uses quality, productivity, capacity, and cost to serve. The two pilot journeys, stretch target, and Day 90 gates are labeled as illustrative. The second tab remains a fictional demonstration.
 
 ## Omitted unsupported claims
 

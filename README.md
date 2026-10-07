@@ -8,11 +8,11 @@ This repository contains my recommendation for the hypothetical OpenAI Support O
 
 ## The recommendation
 
-The assignment asks how Support should evolve over three years from a hypothetical baseline of 1 billion weekly users, 150,000 weekly issues, and 60% automated resolution. I organize the recommendation around the assignment's four areas covering future scale, strategic priorities, operating model, and measures of success. My proposal uses AI to resolve approved routine issues, support people on complex cases, and improve guidance and product decisions after each interaction.
+The assignment asks how Support should evolve over three years from a hypothetical baseline of 1 billion weekly users, 150,000 weekly issues, and 60% automated resolution. I organize the recommendation around the assignment's four areas covering future scale, strategic priorities, operating model, and measures of success. My proposal uses AI to prevent or resolve more issues inside the product, while people govern sensitive decisions and improve the system.
 
-The planning case shows Year 1, Year 2, and Year 3 demand split between automated resolution and human assistance, with human effort in a supporting table. It explains the assumptions, concurrent investments, partner operating model, a four-lens scorecard, and an action plan with owners and illustrative readiness statuses. The only external research link in the recommendation is [OpenAI's published support model](https://openai.com/index/openai-support-model/).
+The planning case shows demand rising toward 281,000 weekly issues while verified automation rises toward an illustrative 88% stretch case. Human-assisted cases then fall from 60,000 to about 34,000 weekly despite higher demand, and modeled human effort falls by 27%. That outcome requires enough issues to qualify for safe automation, measured customer outcomes, and staged expansion. The presentation covers the three investments, partner operating model, four-lens scorecard, action owners, and contingencies. The only external research link in the recommendation is [OpenAI's published support model](https://openai.com/index/openai-support-model/).
 
-The scorecard uses quality, productivity, capacity, and cost to serve to evaluate the customer outcome and each contributor. The figures for future growth, automation, and pilot gates are scenario assumptions, separate from OpenAI targets.
+The scorecard uses quality, productivity, capacity, and cost to serve to evaluate the customer outcome and each contributor. Released capacity goes first toward harder cases, quality review, and product fixes. Staffing changes depend on sustained proof. The figures for future growth, automation, and pilot gates are scenario assumptions, separate from OpenAI targets.
 
 ## Additional Operating Scenarios
 

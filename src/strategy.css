@@ -153,5 +153,112 @@
  #demand{padding-top:.38in!important;padding-bottom:.25in!important}
  #demand>p{font-size:12px!important;line-height:1.35!important}
  #demand .forecast-table th,#demand .forecast-table td{padding:4px 7px!important}
- .journey-strip>div:not(:last-child)::after{content:"→"!important;right:-17px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important}
+.journey-strip>div:not(:last-child)::after{content:"→"!important;right:-17px!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important}
+}
+
+/* Focused three-year AI and human capacity case */
+.lead-stacked span{display:block;margin-top:17px}
+.recommendation-line{margin:18px 0;padding:17px 21px;background:#123f32;color:#f4fbf2;border-left:4px solid #63d49a}
+.recommendation-line b{display:block;color:#8ee1b3;font-size:13px;margin-bottom:5px}
+.recommendation-line p{font-size:15px;line-height:1.5;margin:0}
+.threshold-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 11px}
+.threshold-strip>div{border:1px solid #bdd7c3;background:#f1f8ef;padding:14px 17px}
+.threshold-strip b{display:block;color:var(--forest);font-size:15px;line-height:1.3}
+.threshold-strip p{font-size:13px;line-height:1.48;margin:6px 0 0}
+.feasibility-note{font-size:13px!important;line-height:1.45!important;color:var(--forest);margin-top:9px;background:#eef5ea;padding:9px 12px}
+.feasibility-note b{color:var(--teal)}
+.priority-grid article small+small{margin-top:8px}
+.control-grid,.contingency-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:18px 0}
+.control-grid>div,.contingency-strip>div{border-top:2px solid #86b89a;background:#f2f7f0;padding:11px 13px}
+.control-grid b,.contingency-strip b{display:block;color:var(--forest);font-size:13px}
+.control-grid p,.contingency-strip p{font-size:12px;line-height:1.44;margin:5px 0 0}
+.sequence-table tbody th{width:13%;min-width:115px;font-size:13px;color:var(--teal)}
+.sequence-table tbody td:first-of-type{width:45%}
+.ask-return{display:grid;grid-template-columns:1fr 1fr;gap:17px;padding:16px 19px;margin:17px 0;background:#eaf4e9;border-left:4px solid var(--teal)}
+.ask-return b{display:block;color:var(--teal);font-size:14px}
+.ask-return ul{font-size:12px;line-height:1.48;margin:7px 0 0;padding-left:18px}
+.ask-return li+li{margin-top:5px}
+@media(max-width:800px){.threshold-strip,.control-grid,.contingency-strip,.ask-return{grid-template-columns:1fr}}
+@media print{
+ .lead-stacked span{margin-top:8px!important}
+ .recommendation-line{padding:9px 14px!important;margin:11px 0!important}
+ .recommendation-line p{font-size:12px!important;line-height:1.35!important}
+ .threshold-strip{grid-template-columns:1fr 1fr!important;gap:9px!important;margin:8px 0!important}
+ .threshold-strip>div{padding:8px 12px!important}
+ .threshold-strip b{font-size:12px!important}
+ .threshold-strip p{font-size:10px!important;line-height:1.35!important;margin-top:3px!important}
+ .feasibility-note{font-size:10px!important;margin-top:5px!important;padding:5px 8px!important}
+ .capacity-split>div{padding:7px 10px!important}
+ .capacity-split p{font-size:10px!important}
+ .priority-grid article small{font-size:11px!important;line-height:1.35!important}
+ .priority-grid article small+small{margin-top:4px!important}
+ .control-grid,.contingency-strip{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important;margin:9px 0!important}
+ .control-grid>div,.contingency-strip>div{padding:8px 11px!important}
+ .control-grid p,.contingency-strip p{font-size:10px!important}
+ .ask-return{grid-template-columns:1fr 1fr!important;gap:12px!important;padding:9px 13px!important;margin:10px 0!important}
+ .ask-return ul{font-size:10px!important;line-height:1.3!important;margin-top:4px!important}
+ .ask-return li+li{margin-top:2px!important}
+ .sequence-table th,.sequence-table td{padding:8px!important;font-size:11px!important}
+ #demand>p{font-size:11px!important;line-height:1.3!important}
+}
+
+/* Presentation PDF: keep slide copy legible at normal viewing size. */
+@media print{
+ #demand>p{font-size:15px!important;line-height:1.42!important}
+ #demand .chart-card{padding:10px 18px 7px!important;margin:10px 0 7px!important}
+ #demand .chart-head h3{font-size:19px!important}
+ #demand .chart-head p,#demand .chart-legend{font-size:13px!important}
+ #demand .volume-chart{gap:7px!important;margin:9px 0 7px!important}
+ #demand .volume-track{height:20px!important}
+ #demand .volume-row>b,#demand .volume-row>strong{font-size:14px!important}
+ #demand .volume-row small{font-size:12px!important}
+ #demand .chart-takeaway{font-size:13px!important;padding:6px 10px!important;margin:6px 0!important}
+ #demand .threshold-strip{gap:13px!important;margin:8px 0!important}
+ #demand .threshold-strip>div{padding:9px 13px!important}
+ #demand .threshold-strip b,#demand .capacity-split b{font-size:16px!important}
+ #demand .threshold-strip p,#demand .capacity-split p{font-size:14px!important;line-height:1.43!important}
+ #demand .capacity-split{gap:13px!important;margin:8px 0!important}
+ #demand .capacity-split>div{padding:9px 13px!important}
+ #demand .assumption-footnote,#demand .feasibility-note{font-size:13px!important;line-height:1.4!important}
+ #priorities>p,#operating-model>p,#execution>p,#measures>p{font-size:17px!important;line-height:1.48!important}
+ #priorities .priority-grid{gap:18px!important;margin:24px 0!important}
+ #priorities .priority-grid article{padding:20px!important}
+ #priorities .priority-grid span{font-size:13px!important}
+ #priorities .priority-grid h3{font-size:22px!important}
+ #priorities .priority-grid p{font-size:16px!important;line-height:1.48!important}
+ #priorities .priority-grid small{font-size:14px!important;line-height:1.45!important;margin-top:14px!important}
+ #priorities .plain-callout{padding:17px 22px!important}
+ #priorities .plain-callout strong{font-size:16px!important}
+ #priorities .plain-callout p{font-size:16px!important}
+ #operating-model .journey-strip{gap:14px!important;margin:22px 0!important}
+ #operating-model .journey-strip>div,#operating-model .role-table>div{padding:18px 20px!important}
+ #operating-model .journey-strip span{font-size:13px!important}
+ #operating-model .journey-strip b,#operating-model .role-table b{font-size:17px!important}
+ #operating-model .journey-strip p,#operating-model .role-table p{font-size:15px!important;line-height:1.45!important}
+ #operating-model .partner-note{padding:16px 20px!important;margin:18px 0!important}
+ #operating-model .partner-note b{font-size:16px!important}
+ #operating-model .partner-note p{font-size:15px!important}
+ #operating-model .control-grid{gap:14px!important;margin:17px 0!important}
+ #operating-model .control-grid>div{padding:14px 17px!important}
+ #operating-model .control-grid b{font-size:16px!important}
+ #operating-model .control-grid p{font-size:14px!important}
+ #execution .sequence-table th,#execution .sequence-table td{font-size:15px!important;line-height:1.43!important;padding:12px!important}
+ #execution .sequence-table thead th{font-size:12px!important}
+ #execution .ask-return{gap:18px!important;padding:17px 21px!important;margin:18px 0!important}
+ #execution .ask-return b{font-size:16px!important}
+ #execution .ask-return ul{font-size:15px!important;line-height:1.42!important}
+ #execution .contingency-strip{gap:14px!important;margin:17px 0!important}
+ #execution .contingency-strip>div{padding:14px 17px!important}
+ #execution .contingency-strip b{font-size:16px!important}
+ #execution .contingency-strip p{font-size:14px!important}
+ #measures .measure-table th,#measures .measure-table td{font-size:16px!important;line-height:1.43!important;padding:13px!important}
+ #measures .measure-table thead th{font-size:12px!important}
+ #measures .contribution{padding:18px 22px!important;margin:22px 0!important}
+ #measures .contribution>b{font-size:17px!important}
+ #measures .contribution-grid strong{font-size:16px!important}
+ #measures .contribution-grid p{font-size:14px!important;line-height:1.42!important}
+ #measures .small-note{font-size:14px!important}
+ #appendix .appendix-list p{font-size:16px!important;line-height:1.46!important;padding:15px 0!important}
+ #appendix .appendix-source{font-size:16px!important}
+ #appendix .independence{font-size:14px!important}
 }
