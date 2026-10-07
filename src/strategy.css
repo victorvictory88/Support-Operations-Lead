@@ -428,3 +428,111 @@
  #appendix-financial .appendix-list p{font-size:12px!important;line-height:1.36!important;padding:7px 0!important}
  #appendix-financial .appendix-source{font-size:12px!important;line-height:1.4!important}
 }
+
+/* Revised four-section presentation */
+.volume-track{background:transparent;overflow:visible}
+.volume-bar{border-radius:3px;overflow:hidden}
+.volume-bar .automated,.volume-bar .human{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:750;white-space:nowrap;min-width:0}
+.volume-bar .human{color:#1d2b20}
+.help-tip{display:inline-grid;place-items:center;width:17px;height:17px;border:1px solid #87b49a;border-radius:50%;background:#eef8ed;color:#0b795f;font:700 11px/1 ui-sans-serif,sans-serif;vertical-align:middle;cursor:help;margin-left:3px;white-space:nowrap}
+.help-tip:hover,.help-tip:focus-visible{background:#0b795f;color:white;outline:2px solid #9ad4af;outline-offset:1px}
+.plan-three{margin:17px 0}
+.plan-three article{min-height:0}
+.plan-three p{font-size:13px}
+.compact-roadmap{margin:16px 0}
+.compact-roadmap>div{padding:12px 13px}
+.compact-roadmap ul{font-size:12px;line-height:1.42;margin:6px 0 0;padding-left:17px}
+.compact-roadmap li+li{margin-top:5px}
+.quarterly-check{background:#eaf4e9;border-left:4px solid var(--teal);padding:13px 17px;margin:16px 0 0}
+.quarterly-check>b{display:block;color:var(--teal);font-size:15px;margin-bottom:8px}
+.quarterly-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.quarterly-grid p{border-top:1px solid #bfd7c5;margin:0;padding-top:7px;font-size:12px;line-height:1.4}
+.quarterly-grid strong{display:block;color:var(--forest);margin-bottom:3px}
+.quarterly-grid span{color:#405e4d}
+.finance-intro{font-size:14px!important;line-height:1.48!important}
+.range-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:17px 0 10px}
+.range-grid article{border:1px solid var(--line);background:#f1f7f0;border-top:4px solid #a4bca8;padding:14px 16px}
+.range-grid .range-low{border-top-color:#bc6c61;background:#fbf1ee}
+.range-grid .range-mid{border-top-color:#bd8d39;background:#fbf7ea}
+.range-grid .range-high{border-top-color:var(--teal);background:#eaf4e9}
+.range-grid span{display:block;font:10px ui-monospace,monospace;letter-spacing:.045em;color:#506a59;min-height:27px}
+.range-grid b{display:block;font:700 29px/1.2 Georgia,serif;margin:5px 0 8px;color:var(--forest)}
+.range-grid p{font-size:12px;line-height:1.42;margin:0}
+.finance-basis{font-size:12px!important;color:var(--muted);margin:6px 0 9px}
+.location-lever{display:grid;grid-template-columns:160px 1fr;gap:14px;padding:9px 13px;border:1px solid var(--line);background:#f5f9f3;margin:9px 0}
+.location-lever b{font-size:12px;color:var(--teal)}
+.location-lever p{font-size:12px;line-height:1.43;margin:0}
+.financial-decisions{margin:11px 0}
+.financial-decisions>div{padding:11px 14px}
+.financial-decisions b{font-size:13px}
+.financial-decisions ul{font-size:12px;line-height:1.4;margin:5px 0 0;padding-left:16px}
+.financial-decisions li+li{margin-top:4px}
+.financial-decisions li strong{color:var(--forest)}
+#financial .finance-choice{margin:10px 0 0}
+#financial .finance-choice>div{padding:10px 13px}
+#financial .finance-choice p{font-size:12px}
+.finance-note{font-size:13px!important;line-height:1.47!important;margin:9px 0}
+.appendix-traffic{margin:28px 0;gap:20px}
+.appendix-traffic>div{padding:13px 16px;background:#fff;border:1px solid var(--line);border-top:4px solid currentColor}
+.appendix-traffic p{color:var(--ink);font-size:13px;line-height:1.5}
+#appendix-financial .finance-table tbody tr:last-child{background:transparent;font-weight:normal}
+@media(max-width:800px){.quarterly-grid{grid-template-columns:1fr 1fr}.range-grid{grid-template-columns:1fr}.location-lever{grid-template-columns:1fr;gap:2px}}
+@media(max-width:540px){.volume-row{grid-template-columns:45px minmax(0,1fr) 40px;gap:2px 6px}.volume-bar .automated,.volume-bar .human{font-size:9px}.quarterly-grid{grid-template-columns:1fr}.range-grid b{font-size:30px}}
+@media print{
+ #plan>p{font-size:14px!important}
+ #plan .plan-three{gap:12px!important;margin:14px 0!important}
+ #plan .plan-three article{padding:12px 14px!important}
+ #plan .plan-three h3{font-size:17px!important;margin:5px 0!important}
+ #plan .plan-three p{font-size:12px!important;line-height:1.37!important}
+ #plan .compact-roadmap{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;margin:12px 0!important}
+ #plan .compact-roadmap>div{padding:11px 12px!important}
+ #plan .compact-roadmap b{font-size:14px!important}
+ #plan .compact-roadmap ul{font-size:12px!important;line-height:1.35!important}
+ #plan .quarterly-check{padding:10px 14px!important;margin-top:12px!important}
+ #plan .quarterly-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ #plan .quarterly-grid p{font-size:11px!important;line-height:1.35!important}
+ #financial .finance-intro{font-size:13px!important;line-height:1.38!important;margin-bottom:8px!important}
+ #financial .range-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;margin:11px 0 6px!important}
+ #financial .range-grid article{padding:10px 12px!important}
+ #financial .range-grid b{font-size:26px!important;margin:3px 0 5px!important}
+ #financial .range-grid p{font-size:11px!important;line-height:1.35!important}
+ #financial .finance-basis{font-size:11px!important;margin:5px 0!important}
+ #financial .location-lever{padding:7px 11px!important;margin:7px 0!important}
+ #financial .location-lever p{font-size:11px!important}
+ #financial .financial-decisions{grid-template-columns:1fr 1fr!important;gap:10px!important;margin:7px 0!important}
+ #financial .financial-decisions>div{padding:9px 11px!important}
+ #financial .financial-decisions b{font-size:12px!important}
+ #financial .financial-decisions ul{font-size:11px!important;line-height:1.3!important}
+ #financial .finance-choice{grid-template-columns:1fr 1fr!important;margin:7px 0!important}
+ #financial .finance-choice>div{padding:8px 11px!important}
+ #financial .finance-choice p{font-size:11px!important;line-height:1.35!important}
+ #appendix-financial .finance-note{font-size:12px!important}
+ #appendix-operations .appendix-traffic{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+.metric-clarity .help-tip{display:inline-grid!important;vertical-align:middle}
+.term-tooltip{position:fixed;z-index:50;width:min(310px,calc(100vw - 20px));padding:10px 12px;background:#123f32;color:#f5fff5;border-radius:6px;box-shadow:0 8px 25px #17392e55;font-size:12px;line-height:1.4;pointer-events:none}
+.term-tooltip[hidden]{display:none}
+@media print{
+ #plan .plan-three article{padding:17px 18px!important}
+ #plan .plan-three h3{font-size:21px!important}
+ #plan .plan-three p{font-size:15px!important;line-height:1.43!important}
+ #plan .compact-roadmap>div{padding:15px 16px!important}
+ #plan .compact-roadmap b{font-size:17px!important}
+ #plan .compact-roadmap ul{font-size:14px!important;line-height:1.43!important}
+ #plan .quarterly-check{padding:14px 17px!important}
+ #plan .quarterly-check>b{font-size:18px!important}
+ #plan .quarterly-grid p{font-size:14px!important;line-height:1.42!important}
+ #financial .finance-intro{font-size:15px!important;line-height:1.44!important}
+ #financial .range-grid article{padding:15px 17px!important}
+ #financial .range-grid span{font-size:11px!important}
+ #financial .range-grid b{font-size:32px!important}
+ #financial .range-grid p{font-size:14px!important;line-height:1.43!important}
+ #financial .finance-basis{font-size:13px!important}
+ #financial .location-lever{padding:12px 15px!important}
+ #financial .location-lever b,#financial .location-lever p{font-size:14px!important}
+ #financial .financial-decisions>div{padding:13px 16px!important}
+ #financial .financial-decisions b{font-size:15px!important}
+ #financial .financial-decisions ul{font-size:13px!important;line-height:1.42!important}
+ #financial .finance-choice>div{padding:12px 15px!important}
+ #financial .finance-choice p{font-size:13px!important;line-height:1.42!important}
+}

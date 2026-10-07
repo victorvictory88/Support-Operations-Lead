@@ -33,17 +33,17 @@ window.addEventListener('hashchange',revealAppendixForHash);
 revealAppendixForHash();
 
 const answers=[
-  {match:/human case|cases reach|case count|case volume/i,answer:'The chart counts issues that reach a person each week. In this planning case, that number rises to 66k in Year 1 and then falls to 50k by Year 3, even though total weekly issues reach 500k. People focus on sensitive cases and exceptions as AI handles more routine issues.'},
-  {match:/118|100m|hundred million|hypergrowth/i,answer:'The roughly $118M figure is net vendor cost avoided over three years against a flat 60% AI resolution forecast. It assumes 500k weekly issues and 90% verified AI resolution by Year 3, 3,000 annual cases per vendor rep, 90% vendor-eligible avoided cases, flexible contracts, and a $20M program allowance. Appendix D shows the calculation and downside.'},
-  {match:/financ|saving|cost|budget|onshore|offshore|dollar|money|upside|return on investment|risk and reward/i,answer:'The plan estimates about $118M in net vendor cost avoided over three years under a high-demand scenario. Public onshore and offshore rates anchor the vendor price. The estimate depends on vendor case volume, cases closed per rep, contract flexibility, and a $20M program allowance. Appendix D shows the full math. Appendix E shows a lower-demand comparison.'},
-  {match:/redeploy|released capacity|freed (hours|time)|staff|headcount|vendor|partner|who|owner|responsib/i,answer:'AI handles approved routine issues, partner teams handle defined exceptions and protect coverage, and internal specialists own sensitive decisions and AI controls. I would move people toward harder cases and quality review before changing staffing or partner contracts.'},
-  {match:/idea|vision|strategy|future/i,answer:'The three-year vision is Support that spots common needs and resolves approved problems inside the product before they become tickets. People govern AI, handle sensitive cases, and remove repeat causes. The 90% path is an illustrative stretch target for that vision.'},
+  {match:/human case|cases reach|case count|case volume/i,answer:'The human share falls from 40% today to 10% in the Year 3 stretch case. Weekly human cases rise to 66k in Year 1, then fall to 50k by Year 3 while total weekly issues reach 500k. People focus on sensitive cases and exceptions.'},
+  {match:/118|100m|hundred million|hypergrowth/i,answer:'The $117.5M high case is net vendor cost saved over three years against a forecast that keeps AI resolution at 60%. It assumes 500k weekly issues and 90% verified AI resolution by Year 3, 3,000 annual cases per vendor rep, a high share of vendor-handled cases, flexible contracts, and $20M in AI and rollout spending. The other cases show $42.4M saved or a $13.1M loss.'},
+  {match:/financ|saving|cost|budget|onshore|offshore|dollar|money|upside|return on investment|risk and reward|low.*medium.*high/i,answer:'The low, medium, and high cases share the 500k Year 3 demand path. They differ in AI results, vendor handling, and how quickly contracts can change. Every case uses a blended vendor price with 30% onshore and 70% offshore. A further location shift is a separate option with a possible quality risk.'},
+  {match:/redeploy|released capacity|freed (hours|time)|staff|headcount|vendor|partner|who|owner|responsib/i,answer:'Support Delivery moves trained people into harder cases and AI review first. Operations checks coverage and vendor plans. Trust & Safety owns sensitive review, while Product and Product Engagement use repeat issues to improve the product. Vendor seats change only after customer quality and service coverage hold.'},
+  {match:/idea|vision|strategy|future/i,answer:'AI would turn Support into a connected system that anticipates needs, completes approved actions in the product, and learns from exceptions. The 90% AI path is an illustrative stretch target for the assignment.'},
   {match:/90|82|automation|automated|eligib/i,answer:'The 90% rate is my illustrative Year 3 target, separate from OpenAI targets. At 500k weekly issues, it leaves 50k for people. If AI reaches only 82%, 90k issues reach people, so I would keep coverage and review the issue mix.'},
   {match:/year|glide|growth|graph|chart/i,answer:'The bars show weekly issues moving from 150k today to 500k in Year 3. Automated resolutions rise from 90k to 450k in the plan, while cases reaching people rise to 66k in Year 1 and fall to 50k in Year 3. The remaining human queue is likely to contain more sensitive cases and exceptions.'},
-  {match:/meta|metric|score|sales|revenue|success/i,answer:'The lead customer outcome is durable resolution by issue type. I would read quality, productivity, capacity, and cost to serve together, then inspect AI, partner, and internal contributions using one issue history.'},
+  {match:/meta|metric|score|sales|revenue|success/i,answer:'I would review four buckets every quarter. Quality covers durable resolution, repeat contact, and severe errors. Productivity covers verified AI resolution and time to resolution. Capacity covers issue coverage, backlog, attrition, and no-shows. Cost to Serve includes vendor and AI costs per durable resolution.'},
   {match:/risk|stop|error|privacy|fraud|policy|contingen/i,answer:'A severe privacy, policy, or access error stops the affected AI action and sends impacted cases to people. More repeat contact freezes expansion while the team repairs guidance or tools. If human queues stay high, staffing stays in place.'},
   {match:/first|90|pilot|start|invoice|receipt/i,answer:'The proposed pilots are invoice lookup and a common product how-to journey. I would confirm eligible volume and risk, set a baseline, and return by Day 90 with a scale or stop decision. The detailed pilot gates are illustrative and appear in the appendix.'},
-  {match:/source|assum|logic|appendix/i,answer:'The exercise supplies 1 billion weekly users, 150k weekly issues, and 60% automated resolution. Growth to 500k weekly issues, case complexity, and the 70%, 82%, and 90% AI path are scenario assumptions. The appendix shows the full math, public vendor price references, and the downside case.'}
+  {match:/source|assum|logic|appendix/i,answer:'The exercise supplies 1 billion weekly users, 150k weekly issues, and 60% automated resolution. The 500k demand path and AI targets are exercise assumptions. The appendix shows matching growth factors for users and issues per user, plus public vendor price references and the model inputs.'}
 ];
 function ask(question){
   const q=question.trim();
@@ -63,3 +63,30 @@ form.addEventListener('submit',event=>{
   ask(input.value);
 });
 document.querySelectorAll('[data-question]').forEach(button=>button.addEventListener('click',()=>ask(button.dataset.question)));
+
+const termTooltip=document.createElement('div');
+termTooltip.className='term-tooltip';
+termTooltip.setAttribute('role','tooltip');
+termTooltip.hidden=true;
+document.body.append(termTooltip);
+document.querySelectorAll('.help-tip').forEach(term=>{
+  term.dataset.tip=term.title;
+  term.setAttribute('aria-label',term.title);
+  term.removeAttribute('title');
+});
+function showTerm(term){
+  if(!term?.matches('.help-tip'))return;
+  termTooltip.textContent=term.dataset.tip;
+  termTooltip.hidden=false;
+  const rect=term.getBoundingClientRect();
+  const width=termTooltip.getBoundingClientRect().width;
+  const left=Math.max(10,Math.min(rect.left+rect.width/2-width/2,innerWidth-width-10));
+  const top=rect.bottom+10+termTooltip.offsetHeight>innerHeight?rect.top-termTooltip.offsetHeight-10:rect.bottom+10;
+  termTooltip.style.left=`${left}px`;
+  termTooltip.style.top=`${Math.max(10,top)}px`;
+}
+function hideTerm(){termTooltip.hidden=true}
+document.addEventListener('mouseover',event=>showTerm(event.target.closest?.('.help-tip')));
+document.addEventListener('mouseout',event=>{if(event.target.closest?.('.help-tip'))hideTerm()});
+document.addEventListener('focusin',event=>showTerm(event.target.closest?.('.help-tip')));
+document.addEventListener('focusout',event=>{if(event.target.closest?.('.help-tip'))hideTerm()});

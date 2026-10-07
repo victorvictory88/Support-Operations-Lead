@@ -1,58 +1,34 @@
-# Three-year vendor cost decision model
+# Three-year financial scenario
 
-This illustrative model estimates vendor spend avoided compared with keeping AI resolution at the exercise's 60% starting point as demand grows. It is a planning scenario, separate from OpenAI forecasts and contract terms. Revenue, customer retention value, direct employee reductions, and product fixes that prevent issues remain outside the dollar estimate.
+This file explains the illustrative cost range shown in the [take-home page](../src/index.html). The calculator in [finance.mjs](../src/finance.mjs) writes all inputs and unrounded results to `dist/financial-model.json` during a build. These figures are planning assumptions for the interview exercise. OpenAI contract costs and case data are unknown.
 
-The calculation is reproducible in [`src/finance.mjs`](../src/finance.mjs). The production build writes `dist/financial-model.json` with every input and unrounded result.
+## Demand and AI path
 
-## Public vendor price evidence
+The exercise supplies 1 billion weekly users, 150,000 weekly issues, and a 60% automated resolution rate. The proposal uses 220,000, 330,000, and 500,000 weekly issues across Years 1–3. For clarity, user growth and issues per user use matching factors. The exact factor in each year is the square root of that year's weekly issue count divided by 150,000. Rounded values are 1.21×, 1.48×, and 1.83× for both factors.
 
-| Reference | Published price | Use in this model |
-| --- | ---: | --- |
-| [SupportOps Global pricing](https://www.supportopsglobal.com/pricing) | $45 per hour for U.S. and Canada support, and $1,950 per month for a dedicated Philippines representative | These anchor the onshore and offshore vendor bill rates. Management, reporting, and quality oversight appear in the published plans. |
-| [ConnectPro Philippines pricing](https://connectprooutsourcing.com/services/customer-support-outsourcing) | From $1,400 per agent monthly, or $1,600 for extended hours, with a separate managed-team charge | This cross-checks the offshore price range. |
-| [PITON-Global pricing](https://www.piton-global.com/pricing/) | $10–$16 per hour for fully loaded Philippines support | This cross-checks the offshore price with seat, supervision, and quality included. |
-| [U.S. Bureau of Labor Statistics](https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm) | $21.53 median hourly wage for U.S. customer service representatives in May 2025 | This provides a wage cross-check. Vendor bills also cover management and quality oversight. |
+The high and medium cases reach 70%, 82%, and 90% verified AI resolution. The low case reaches 65%, 75%, and 82%. At 500,000 weekly issues, those final rates send 50,000 or 90,000 cases to people. The 90% stretch target requires enough issues that AI can handle safely, approved actions, and customer outcomes that hold after the initial answer.
 
-These prices are public reference points. SupportOps Global advertises monthly terms and 30-day notice, showing that flexible contracts exist in the market. OpenAI's prices, contract floors, language mix, service hours, and technical specialization remain unknown. Finance should replace every list price with actual contract terms before making budget decisions.
+## Public vendor prices
 
-## Why demand reaches 500k weekly issues
+[SupportOps Global](https://www.supportopsglobal.com/pricing) lists a dedicated Philippines representative at $1,950 monthly and North American support at $45 hourly. The annualized figures are $23,400 offshore and $93,600 onshore at 2,080 hours. [ConnectPro](https://connectprooutsourcing.com/services/customer-support-outsourcing) provides an additional Philippines price reference. [PITON-Global](https://www.piton-global.com/pricing/) provides another outsourcing cost reference. These public prices indicate an order of magnitude. OpenAI's actual contracts may differ.
 
-The exercise supplies 1 billion weekly users and 150,000 weekly support issues. My high-growth plan assumes 220k, 330k, and 500k weekly issues across Years 1–3. The Year 3 figure equals 1.5 times as many weekly users and 2.22 times as many issues per user. More products, channels, and demanding use cases could raise the issue rate even as product fixes reduce repeat problems. This is an aggressive planning assumption for the assignment, separate from a verified demand forecast.
+Every financial case already assumes 30% onshore and 70% offshore vendor seats, giving an illustrative blended annual bill of $44,460 per representative. Moving 100 suitable seats from onshore to offshore would save $7.02M yearly before transition costs. That separate option is excluded from the AI savings range. It introduces potential quality risk in language nuance, specialist accuracy, and escalation.
 
-The plan raises verified AI resolution from 60% today to 70%, 82%, and 90%. Cases reaching people rise to 66k in Year 1, then fall to 59.4k in Year 2 and 50k in Year 3. That path requires enough eligible issues, approved AI actions, lasting customer resolution, and coverage for the more complex cases left with people.
+## How the model counts savings
 
-## Vendor unit costs and planning inputs
+The comparison keeps AI resolution at 60% as issue demand grows. In each year, extra cases resolved by AI equal weekly issues multiplied by the difference between that year's proposed AI rate and 60%. The model counts 52 weeks, estimates the portion a vendor would otherwise handle, converts that volume to vendor representative years, and applies the blended vendor bill. Only the share that can reach a contract or planned-seat budget counts as savings. The model then subtracts proposed AI usage, tools, training, evaluation, and oversight spending. It assigns no dollar value to revenue growth, retention, internal staffing changes, or product fixes.
 
-| Input | Assumption | Reason |
-| --- | ---: | --- |
-| Onshore vendor representative | $45 hourly, or $93,600 yearly | Published vendor price multiplied by 40 hours and 52 weeks. |
-| Offshore vendor representative | $1,950 monthly, or $23,400 yearly | Published vendor price multiplied by 12 months. |
-| Vendor location mix | 30% onshore and 70% offshore | Illustrative coverage for sensitive cases and defined high-volume queues. |
-| Blended vendor price | $44,460 per representative year | Weighted average of the two published prices. |
-| Vendor case throughput | 3,000 cases yearly, or $14.82 per case | About 12 closures per scheduled workday, assuming 250 days. This reflects more involved cases. Actual handling data must decide the rate for cases AI replaces. |
-| Vendor-eligible share | 90% of avoided human cases | AI first addresses repeatable cases that partners might otherwise handle. Issue-level ownership must confirm this share. |
-| Budget conversion | 40%, 75%, and 90% in Years 1–3 | Contract changes or avoided future seats put potential capacity value into the budget after customer quality and coverage hold. |
-| Program allowance | $4M, $6M, and $10M in Years 1–3 | Illustrative room for AI usage, evaluations, tooling, training, and oversight. Finance must price each line. |
+| Input | Low | Medium | High |
+| --- | ---: | ---: | ---: |
+| Year 3 verified AI resolution | 82% | 90% | 90% |
+| Share of AI-shifted cases vendors would handle | 70% | 70% | 90% |
+| Cases each vendor rep handles yearly | 4,000 | 4,000 | 3,000 |
+| Potential savings that reach budget in Years 1–3 | 10%, 10%, 10% | 25%, 50%, 75% | 40%, 75%, 90% |
+| AI and rollout spending across three years | $20.0M | $20.0M | $20.0M |
+| Net vendor cost saved across three years | −$13.1M | +$42.4M | +$117.5M |
 
-For each year, avoided human cases equal weekly issues multiplied by the difference between the proposed AI rate and a flat 60% rate. Annual avoided cases are multiplied by 90% vendor share, divided by 3,000 cases per vendor rep, and valued at $44,460 per representative year. Only the stated budget-conversion share counts as expense avoided. The program allowance is then deducted.
+The high case saves $137.5M in vendor costs against the comparison forecast and subtracts $20M in AI and rollout spending. Its yearly net figures are +$2.1M, +$31.8M, and +$83.6M. This is future expense saved against a growing-demand forecast. Today's vendor bill could still increase.
 
-| Planning result | Year 1 | Year 2 | Year 3 | Three years |
-| --- | ---: | ---: | ---: | ---: |
-| Weekly issues | 220k | 330k | 500k | — |
-| Verified AI resolution | 70% | 82% | 90% | — |
-| Cases reaching people | 66k | 59.4k | 50k | — |
-| Vendor spend avoided against flat 60% AI | $6.10M | $37.77M | $93.63M | $137.50M |
-| AI, tooling, and quality allowance | $4.00M | $6.00M | $10.00M | $20.00M |
-| Net cost avoided | +$2.10M | +$31.77M | +$83.63M | +$117.50M |
+## Funding and controls
 
-This figure measures future expense avoided against a flat-automation forecast. Today's vendor budget could still rise under hypergrowth. It is sensitive to throughput. At 6,000 cases per vendor rep, with other plan inputs held constant, the modeled three-year net falls to about $48.8M. Leadership should inspect actual case handling times, partner queue ownership, contract floors and renewal dates, planned seat additions, and AI running costs before treating $117.5M as a budget target.
-
-## Leadership choice and downside
-
-I would approve a limited pilot with access to case, quality, cost, and contract data. Later funding would depend on lasting resolution, repeat contact, severe errors, backlog, qualified coverage, and Finance-confirmed vendor expense avoidance. A lower case count alone cannot release the next budget. Year 1 needs temporary human coverage because cases reaching people rise from 60k to 66k before falling.
-
-A downside path reaches only 65%, 75%, and 82% verified AI resolution. If 70% of avoided cases are vendor eligible, each vendor rep closes 4,000 cases yearly, and just 10% of potential value reaches the budget each year, spending the full $20M creates a $13.1M shortfall. Year 3 would leave about 90k weekly cases for people. Staged funding and a stop decision after a failed pilot aim to contain that loss.
-
-## Lower-demand sensitivity
-
-If demand reaches 186k, 230k, and 281k weekly issues, with 70%, 80%, and 88% verified AI resolution, the financial opportunity shrinks. At 6,000 cases per vendor rep and a $9M program allowance, the cautious vendor and contract assumptions yield about $10.3M net over three years. A 90% vendor share and faster contract changes yield about $30.1M. The website keeps this sensitivity in Appendix E so leadership can compare demand paths without losing the main high-growth recommendation.
+I would seek a capped first-stage budget and use the first 90 days to confirm issue ownership, contract terms, case handling time, AI costs, and current customer outcomes. Pilot targets are 10% fewer eligible cases reaching people, a five-point improvement in durable resolution, and zero severe AI errors. Later funding would require repeat contact and backlog age at or below baseline, plus vendor savings that Finance confirms can reach a budget. A severe AI error stops the affected action and sends those cases to people. These are proposed planning gates, separate from OpenAI commitments.
