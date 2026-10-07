@@ -1,8 +1,8 @@
 # Albert Chan | Support Operations Lead
 
-**[View the take-home assignment](https://support-operations-albert-chan.albe88948804.chatgpt.site/)** · [Explore additional operating scenarios](https://support-operations-albert-chan.albe88948804.chatgpt.site/operating-scenarios.html) · [Download the PDF](src/assets/Albert-Chan-OpenAI-Support-Operations-Take-Home.pdf)
+**[View the take-home assignment](https://support-operations-albert-chan.albe88948804.chatgpt.site/)** · [Explore additional operating scenarios](https://support-operations-albert-chan.albe88948804.chatgpt.site/operating-scenarios.html)
 
-This repository contains my recommendation for the hypothetical OpenAI Support Operations take-home. The ChatGPT Site is the shareable presentation. GitHub keeps the source, the PDF, and the fictional operating examples available for review.
+This repository contains my recommendation for the hypothetical OpenAI Support Operations take-home. The ChatGPT Site is the current shareable presentation. GitHub keeps the source and fictional operating examples available for review.
 
 ![Take-home assignment opening page](docs/assets/recommendation.png)
 
@@ -43,4 +43,4 @@ npm run build
 npm run preview
 ```
 
-GitHub Actions checks the project and publishes a lightweight redirect from GitHub Pages to the ChatGPT Site. The full source and PDF remain in this repository.
+GitHub Actions checks the project and publishes a lightweight redirect from GitHub Pages to the ChatGPT Site. The full site source remains in this repository.

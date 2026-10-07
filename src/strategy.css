@@ -589,3 +589,9 @@
  #financial .closing-quote p{font-size:25px!important;line-height:1.27!important}
  #financial .closing-quote footer{font-size:12px!important}
 }
+
+/* Keep the future headline attached to its four outcomes. */
+#future .future-label{margin:9px 0 0!important}
+#future .baseline{margin:4px 0 22px!important}
+.appendix-measure-note{margin:16px 0 0;padding:15px 18px;border-left:4px solid var(--teal);background:#eaf4e9;font-size:14px;line-height:1.5}
+.appendix-measure-note b{color:var(--teal)}
