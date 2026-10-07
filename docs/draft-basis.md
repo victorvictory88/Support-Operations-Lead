@@ -14,7 +14,7 @@
 
 ## Draft
 
-The four-section take-home covers the case for change, the three-year path, the Product/People/Process plan, and the financial choice. An AI-led Support system resolves more approved needs inside the product, while trained people govern sensitive decisions and improve the system. The demand scenario combines weekly user growth with rising issue frequency and reaches 500,000 weekly issues. The annual roadmap targets 70%, 82%, and 90% verified AI resolution. The quarterly scorecard tracks Quality, Productivity, Capacity, and Cost to Serve across AI, partners, and internal specialists. Core 04 compares low, medium, and high financial cases on one demand path. The appendix keeps demand assumptions, the three-step issue flow, financial inputs, and two sensitivity checks. The second tab remains a fictional demonstration.
+The four-section take-home covers the case for change, the three-year path, the Product/People/Process plan, and the financial choice. An AI-led Support system resolves more approved needs inside the product, while trained people govern sensitive decisions and improve the system. The demand scenario combines weekly user growth with rising issue frequency and reaches 500,000 weekly issues. The annual roadmap targets 70%, 80%, and 90% verified AI resolution. The quarterly scorecard tracks Quality, Productivity, Capacity, and Cost to Serve across AI, partners, and specialists. Core 04 compares low, medium, and high financial cases on one demand path, then closes with Glen Worthington's quote. The appendix keeps demand assumptions, the three-step issue flow with examples, financial inputs, and two sensitivity checks. The second tab remains a fictional demonstration.
 
 ## Omitted unsupported claims
 

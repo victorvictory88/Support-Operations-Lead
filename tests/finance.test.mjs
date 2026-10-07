@@ -17,11 +17,11 @@ test('all financial cases use the same hypergrowth demand path',()=>{
 });
 
 test('high case includes only budget savings and subtracts rollout spend',()=>{
-  assert.deepEqual(HIGH_FINANCE.years.map(row=>row.automationRate),[0.70,0.82,0.90]);
-  assert.equal(Math.round(HIGH_FINANCE.totals.vendorSavingsInBudget),137501442);
-  assert.equal(Math.round(HIGH_FINANCE.totals.net),117501442);
+  assert.deepEqual(HIGH_FINANCE.years.map(row=>row.automationRate),[0.70,0.80,0.90]);
+  assert.equal(Math.round(HIGH_FINANCE.totals.vendorSavingsInBudget),134068241);
+  assert.equal(Math.round(HIGH_FINANCE.totals.net),114068241);
   assert.equal(Math.round(HIGH_FINANCE.years[2].weeklyIssues*(1-HIGH_FINANCE.years[2].automationRate)),50000);
-  assert.deepEqual(HIGH_FINANCE.years.map(row=>Math.round(row.plannedVendorSeats)),[1030,927,780]);
+  assert.deepEqual(HIGH_FINANCE.years.map(row=>Math.round(row.plannedVendorSeats)),[1030,1030,780]);
   assert.equal(Math.round(150000*0.40*52*FINANCE_ASSUMPTIONS.vendorCaseShare/FINANCE_ASSUMPTIONS.casesPerVendorRepYear),936);
 });
 
@@ -29,13 +29,13 @@ test('medium case exposes the budget and vendor handling sensitivity',()=>{
   assert.equal(MEDIUM_FINANCE.vendorCaseShare,0.70);
   assert.equal(MEDIUM_FINANCE.casesPerVendorRepYear,4000);
   assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.budgetSavingsRate),[0.25,0.50,0.75]);
-  assert.equal(Math.round(MEDIUM_FINANCE.totals.net),42427620);
+  assert.equal(Math.round(MEDIUM_FINANCE.totals.net),41092486);
 });
 
 test('low case shows loss if AI and vendor savings underperform',()=>{
-  assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.75,0.82]);
-  assert.equal(Math.round(LOW_FINANCE.totals.net),-13101809);
-  assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),90000);
+  assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.75,0.80]);
+  assert.equal(Math.round(LOW_FINANCE.totals.net),-13506395);
+  assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),100000);
 });
 
 test('smaller vendor ownership lowers savings without changing case count',()=>{
@@ -45,7 +45,7 @@ test('smaller vendor ownership lowers savings without changing case count',()=>{
 });
 
 test('higher vendor throughput and rising baseline narrow the high case',()=>{
-  assert.equal(Math.round(HIGH_DOUBLE_THROUGHPUT.totals.net),48750721);
+  assert.equal(Math.round(HIGH_DOUBLE_THROUGHPUT.totals.net),47034120);
   assert.deepEqual(HIGH_RISING_BASELINE.years.map(row=>row.comparisonAutomationRate),[0.65,0.68,0.70]);
-  assert.equal(Math.round(HIGH_RISING_BASELINE.totals.net),69505983);
+  assert.equal(Math.round(HIGH_RISING_BASELINE.totals.net),66072782);
 });

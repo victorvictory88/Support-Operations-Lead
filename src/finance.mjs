@@ -11,7 +11,7 @@ export const FINANCE_ASSUMPTIONS=Object.freeze({
   existingAutomationRate:0.60,
   years:[
     {year:1,weeklyIssues:220000,automationRate:0.70,budgetSavingsRate:0.40,programCost:4000000},
-    {year:2,weeklyIssues:330000,automationRate:0.82,budgetSavingsRate:0.75,programCost:6000000},
+    {year:2,weeklyIssues:330000,automationRate:0.80,budgetSavingsRate:0.75,programCost:6000000},
     {year:3,weeklyIssues:500000,automationRate:0.90,budgetSavingsRate:0.90,programCost:10000000}
   ]
 });
@@ -42,6 +42,6 @@ export function calculateFinance(assumptions=FINANCE_ASSUMPTIONS,overrides={}){
 
 export const HIGH_FINANCE=calculateFinance();
 export const MEDIUM_FINANCE=calculateFinance(FINANCE_ASSUMPTIONS,{vendorCaseShare:0.70,casesPerVendorRepYear:4000,budgetSavingsRate:[0.25,0.50,0.75]});
-export const LOW_FINANCE=calculateFinance(FINANCE_ASSUMPTIONS,{automationRates:[0.65,0.75,0.82],vendorCaseShare:0.70,casesPerVendorRepYear:4000,budgetSavingsRate:[0.10,0.10,0.10]});
+export const LOW_FINANCE=calculateFinance(FINANCE_ASSUMPTIONS,{automationRates:[0.65,0.75,0.80],vendorCaseShare:0.70,casesPerVendorRepYear:4000,budgetSavingsRate:[0.10,0.10,0.10]});
 export const HIGH_DOUBLE_THROUGHPUT=calculateFinance(FINANCE_ASSUMPTIONS,{casesPerVendorRepYear:6000});
 export const HIGH_RISING_BASELINE=calculateFinance(FINANCE_ASSUMPTIONS,{comparisonAutomationRates:[0.65,0.68,0.70]});
