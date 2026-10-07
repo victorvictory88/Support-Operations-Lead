@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {FINANCE_ASSUMPTIONS,HIGH_FINANCE,MEDIUM_FINANCE,LOW_FINANCE,HIGH_DOUBLE_THROUGHPUT,HIGH_RISING_BASELINE,calculateFinance} from '../src/finance.mjs';
+import {FINANCE_ASSUMPTIONS,HIGH_FINANCE,MEDIUM_FINANCE,LOW_FINANCE,LOWER_DEMAND_FINANCE,HIGH_DOUBLE_THROUGHPUT,HIGH_RISING_BASELINE,calculateFinance} from '../src/finance.mjs';
 
 test('public vendor prices and the blended location mix reconcile',()=>{
   assert.equal(HIGH_FINANCE.annualOnshore,93600);
@@ -26,20 +26,28 @@ test('high case includes only budget savings and subtracts rollout spend',()=>{
   assert.equal(Math.round(150000*0.40*52*FINANCE_ASSUMPTIONS.vendorCaseShare/FINANCE_ASSUMPTIONS.casesPerVendorRepYear),936);
 });
 
-test('medium case exposes the budget and vendor handling sensitivity',()=>{
-  assert.equal(MEDIUM_FINANCE.vendorCaseShare,0.70);
-  assert.equal(MEDIUM_FINANCE.casesPerVendorRepYear,4000);
-  assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.budgetSavingsRate),[0.25,0.50,0.75]);
-  assert.equal(Math.round(MEDIUM_FINANCE.totals.net),41092486);
-  assert.equal(Math.round(MEDIUM_FINANCE.years[2].plannedVendorSeats),455);
-  assert.equal(Math.round(MEDIUM_FINANCE.years[2].comparisonVendorSeats),1820);
+test('medium and high use one vendor baseline so AI progress explains the gap',()=>{
+  assert.equal(MEDIUM_FINANCE.vendorCaseShare,HIGH_FINANCE.vendorCaseShare);
+  assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.casesPerVendorRepYear),HIGH_FINANCE.years.map(row=>row.casesPerVendorRepYear));
+  assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.budgetSavingsRate),HIGH_FINANCE.years.map(row=>row.budgetSavingsRate));
+  assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.automationRate),[0.70,0.75,0.80]);
+  assert.equal(Math.round(MEDIUM_FINANCE.totals.net),71933499);
+  assert.equal(Math.round(MEDIUM_FINANCE.years[2].plannedVendorSeats),1560);
+  assert.equal(Math.round(MEDIUM_FINANCE.years[2].comparisonVendorSeats),3120);
 });
 
 test('low case shows loss if AI and vendor savings underperform',()=>{
-  assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.75,0.80]);
-  assert.equal(Math.round(LOW_FINANCE.totals.net),-13506395);
-  assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),100000);
-  assert.equal(Math.round(LOW_FINANCE.years[2].plannedVendorSeats),910);
+  assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.70,0.75]);
+  assert.equal(LOW_FINANCE.vendorCaseShare,HIGH_FINANCE.vendorCaseShare);
+  assert.equal(Math.round(LOW_FINANCE.totals.net),-11954518);
+  assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),125000);
+  assert.equal(Math.round(LOW_FINANCE.years[2].plannedVendorSeats),1950);
+});
+
+test('product improvement sensitivity lowers demand and the modeled savings',()=>{
+  assert.deepEqual(LOWER_DEMAND_FINANCE.years.map(row=>row.weeklyIssues),[175000,200000,250000]);
+  assert.equal(Math.round(LOWER_DEMAND_FINANCE.totals.net),50587121);
+  assert.equal(Math.round(LOWER_DEMAND_FINANCE.years[2].plannedVendorSeats),390);
 });
 
 test('smaller vendor ownership lowers savings without changing case count',()=>{

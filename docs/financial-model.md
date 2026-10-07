@@ -4,9 +4,11 @@ This file explains the illustrative cost range shown in the [take-home page](../
 
 ## Demand and AI path
 
-The exercise supplies 1 billion weekly users, 150,000 weekly issues, and a 60% automated resolution rate. That equals 1.5 weekly support issues per 10,000 weekly users. The stretch scenario assumes 1.25 billion, 1.5 billion, and 2 billion weekly users across Years 1–3. It also assumes 1.76, 2.2, and 2.5 weekly issues per 10,000 users. Multiplying each pair produces 220,000, 330,000, and 500,000 weekly issues. Paid, business, and developer use could raise issue frequency as product needs expand. These scenario inputs are separate from OpenAI growth forecasts.
+The exercise supplies 1 billion weekly users, 150,000 weekly issues, and a 60% automated resolution rate. That equals 1.5 weekly support issues per 10,000 weekly users. The demand stress case assumes 1.25 billion, 1.5 billion, and 2 billion weekly users across Years 1–3. It also assumes 1.76, 2.2, and 2.5 weekly issues per 10,000 users. Multiplying each pair produces 220,000, 330,000, and 500,000 weekly issues. This path assumes paid, business, and developer needs create issues faster than Product can remove them. These inputs are separate from OpenAI growth forecasts.
 
-The high and medium cases reach 70%, 80%, and 90% verified AI resolution. The low case reaches 65%, 75%, and 80%. At 500,000 weekly issues, those final rates send 50,000 or 100,000 cases to people. The 90% stretch target requires enough issues that AI can handle safely, approved actions, and customer outcomes that hold after the initial answer.
+The high case reaches 70%, 80%, and 90% verified AI resolution. The medium case reaches 70%, 75%, and 80%, while the low case reaches 65%, 70%, and 75%. At 500,000 weekly issues, those final rates send 50,000, 100,000, or 125,000 cases to people. The 90% stretch target requires enough issues that AI can handle safely, approved actions, and customer outcomes that hold after the initial answer.
+
+Product improvement can lower issue frequency. A second demand path assumes 175,000, 200,000, and 250,000 weekly issues across Years 1–3. At 2 billion weekly users, 250,000 issues imply 1.25 issues per 10,000 users, below today's 1.5. Keeping the high case's AI and vendor assumptions on that lower demand path gives about $51M net vendor savings instead of $111M. Fewer than today's 150,000 weekly issues with 2 billion users would require an issue rate below 0.75 per 10,000, over 50% below today's rate. These are sensitivity checks, not forecasts.
 
 ## Public vendor prices
 
@@ -20,16 +22,16 @@ The comparison keeps AI resolution at 60% as issue demand grows. In each year, e
 
 | Input | Low | Medium | High |
 | --- | ---: | ---: | ---: |
-| Year 3 verified AI resolution | 80% | 90% | 90% |
-| Human-assisted cases vendors would handle | 70% | 70% | 90% |
-| Cases each vendor rep handles yearly | 4,000 | 4,000 | 3,000 in Years 1 and 3, with 3,300 in Year 2 |
-| Potential savings included in future budgets in Years 1–3 | 10%, 10%, 10% | 25%, 50%, 75% | 40%, 75%, 90% |
+| Year 3 verified AI resolution | 75% | 80% | 90% |
+| Human-assisted cases vendors would handle | 90% | 90% | 90% |
+| Cases each vendor rep handles yearly | 3,000 in Years 1 and 3, with 3,300 in Year 2 | 3,000 in Years 1 and 3, with 3,300 in Year 2 | 3,000 in Years 1 and 3, with 3,300 in Year 2 |
+| Potential savings included in future budgets in Years 1–3 | 10%, 10%, 10% | 40%, 75%, 90% | 40%, 75%, 90% |
 | AI and rollout spending across three years | $20M | $20M | $20M |
-| Net vendor cost saved across three years | −$14M | +$41M | +$111M |
-| Estimated vendor reps in Year 3 | about 910 | about 455 | about 780 |
-| Estimated vendor reps in Year 3 if AI stays at 60% | about 1,820 | about 1,820 | about 3,120 |
+| Net vendor cost saved across three years | −$12M | +$72M | +$111M |
+| Estimated vendor reps in Year 3 | about 1,950 | about 1,560 | about 780 |
+| Estimated vendor reps in Year 3 if AI stays at 60% | about 3,120 | about 3,120 | about 3,120 |
 
-Both the medium and high cases reach 90% AI resolution in Year 3. The high case is about $70M above the medium case because it assumes vendors would have handled 90% rather than 70% of human-assisted cases, lower cases per rep, and a larger share of vendor cost removed from future budgets. The high case saves about $131M in vendor costs against the comparison forecast and subtracts $20M in assumed AI and rollout spending. Its rounded yearly net figures are +$2M, +$25M, and +$84M. These are future expenses saved against a growing-demand forecast. The Year 2 staffing estimate assumes AI assistance and better routing raise vendor capacity from 3,000 to 3,300 cases per rep. Year 3 plans 3,000 because the remaining human cases may take longer to resolve. The modeled vendor reps are about 940 today, 1,030 in Year 1, about 940 in Year 2, and 780 in Year 3. The 60%-AI comparison would require about 1,370, 1,870, and 3,120 vendor reps in Years 1–3. The exercise gives no actual vendor rep count, so these numbers are estimates rather than a hiring plan. Today's vendor bill could still increase during the transition.
+Every case uses the same vendor assignment, rep throughput, location mix, and cost. Medium reaches 80% AI resolution in Year 3 and needs about 1,560 vendor reps. High reaches 90% and needs about 780. Faster Year 2 and Year 3 AI progress explains the $39M net gap. The high case saves about $131M in vendor costs against the comparison forecast and subtracts $20M in assumed AI and rollout spending. Its rounded yearly net figures are +$2M, +$25M, and +$84M. Low progress and limited reductions to future vendor spending leave about $8M in gross savings against $20M in spending, or a $12M net loss. These are future expenses saved against a growing-demand forecast, not a claim that today's vendor bill falls by those amounts. The Year 2 staffing estimate assumes AI assistance and better routing raise vendor capacity from 3,000 to 3,300 cases per rep. Year 3 plans 3,000 because the remaining human cases may take longer to resolve. The high case models about 940 vendor reps today, 1,030 in Year 1, about 940 in Year 2, and 780 in Year 3. The 60%-AI comparison would require about 1,370, 1,870, and 3,120 vendor reps in Years 1–3. The exercise gives no actual vendor rep count, so these numbers are estimates rather than a hiring plan. Today's vendor bill could still increase during the transition.
 
 One near break-even path has AI resolving 62%, 63%, and 65% of weekly issues in Years 1–3. At 500,000 weekly issues in Year 3, people would handle 175,000 each week, and high-case vendor assignment and throughput imply about 2,730 vendor reps. Keeping AI at 60% would require about 3,120 under those same staffing assumptions. The rounded path saves about $22M in vendor costs across three years, slightly above the assumed $20M investment. This is a sensitivity example, not a target. Quality, SLA, and coverage must also hold. The headline depends on two sensitive assumptions. Doubling vendor throughput to 6,000 cases per rep each year cuts high-case savings to about $47M after rollout spending. A separate comparison with 65%, 68%, and 70% automation across Years 1–3 without this plan yields about $64M. Both figures retain the other high-case assumptions. The calculator exports these checks to `dist/financial-model.json`.
 
