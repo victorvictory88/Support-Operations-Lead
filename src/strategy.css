@@ -262,3 +262,107 @@
  #appendix .appendix-source{font-size:16px!important}
  #appendix .independence{font-size:14px!important}
 }
+
+/* Four core presentation pages with supporting detail kept behind one appendix. */
+.rail-appendix{display:inline-block;margin-top:11px;color:#bce7c9;font-size:12px;font-weight:700}
+.metric-clarity{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:18px 0}
+.metric-clarity>div{border:1px solid #c8ddcc;background:#f1f8ef;padding:15px 18px}
+.metric-clarity span{display:block;font:11px ui-monospace,monospace;letter-spacing:.07em;color:var(--teal)}
+.metric-clarity b{display:block;font-size:22px;line-height:1.2;color:var(--forest);margin:7px 0}
+.metric-clarity p{font-size:13px;line-height:1.5;margin:0}
+.path-gate{margin:14px 0}
+.concise-roles{margin:18px 0}
+.concise-roles>div{padding:15px 17px}
+.concise-roles p{margin:7px 0 0}
+.compact-roadmap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:22px 0}
+.compact-roadmap>div{background:#f0f6ee;border-top:3px solid var(--teal);padding:15px 16px}
+.compact-roadmap b{display:block;font-size:14px;color:var(--teal);margin-bottom:5px}
+.compact-roadmap p{font-size:13px;line-height:1.45;margin:0}
+.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.decision-grid>div{background:#eaf4e9;border-left:4px solid var(--teal);padding:16px 19px}
+.decision-grid b{display:block;color:var(--teal);font-size:15px}
+.decision-grid ul{font-size:13px;line-height:1.5;margin:8px 0 0;padding-left:18px}
+.decision-grid li+li{margin-top:5px}
+.decision-rule{background:#123f32;color:#f4fbf2;padding:18px 22px;margin:18px 0}
+.decision-rule b{color:#8ee1b3;font-size:14px}
+.decision-rule p{font-size:14px;line-height:1.52;margin:5px 0 0}
+.reference-appendix{display:block;background:#e4ede5}
+.reference-appendix>summary{list-style:none;cursor:pointer;padding:28px clamp(26px,4vw,72px);border-top:2px solid var(--teal);border-bottom:1px solid var(--line);background:#eaf2e9;display:grid;gap:3px}
+.reference-appendix>summary::-webkit-details-marker{display:none}
+.reference-appendix>summary span{font:11px ui-monospace,monospace;letter-spacing:.08em;color:var(--teal)}
+.reference-appendix>summary b{font-size:18px;color:var(--forest)}
+.reference-appendix>summary small{font-size:12px;color:var(--muted)}
+.reference-appendix>summary::after{content:"+";font-size:28px;line-height:1;grid-column:2;grid-row:1/4;align-self:center;color:var(--teal)}
+.reference-appendix[open]>summary::after{content:"−"}
+.reference-appendix>summary{grid-template-columns:1fr auto}
+.reference-appendix .appendix{background:#f8fbf6}
+.compact-forecast tbody th{min-width:0;width:28%;font-size:13px}
+.compact-forecast tbody td{font-size:15px}
+#appendix-assumptions .appendix-list{margin-top:17px}
+#appendix-measures .appendix-list{margin-top:13px}
+@media(max-width:800px){.metric-clarity,.decision-grid{grid-template-columns:1fr}.compact-roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.compact-roadmap{grid-template-columns:1fr}.metric-clarity b{font-size:20px}.reference-appendix>summary{padding:20px}}
+@media print{
+ .reference-appendix{background:white!important}
+ .reference-appendix>summary{display:none!important}
+ #future .lead{font-size:16px!important;line-height:1.38!important}
+ #future .lead-stacked span{margin-top:7px!important}
+ #future .baseline{margin:13px 0!important}
+ #future .support-quote{margin:10px 0!important;padding:9px 14px!important}
+ #future .support-quote p{font-size:16px!important;line-height:1.28!important}
+ #future .vision{margin-top:11px!important;padding:11px 14px!important}
+ #future .vision p{font-size:14px!important}
+ #future .recommendation-line{padding:12px 16px!important;margin:12px 0!important}
+ #future .recommendation-line p{font-size:14px!important;line-height:1.38!important}
+ #future .source-note{font-size:11px!important}
+ #demand .metric-clarity{gap:12px!important;margin:12px 0!important}
+ #demand .metric-clarity>div{padding:12px 15px!important}
+ #demand .metric-clarity b{font-size:19px!important}
+ #demand .metric-clarity p{font-size:13px!important}
+ #demand .path-gate{padding:12px 16px!important;margin:10px 0!important}
+ #demand .path-gate strong{font-size:15px!important}
+ #demand .path-gate p{font-size:14px!important}
+ #demand .source-note{font-size:12px!important}
+ #plan>p,#decision>p{font-size:17px!important;line-height:1.45!important}
+ #plan .priority-grid{gap:16px!important;margin:20px 0!important}
+ #plan .priority-grid article{padding:18px!important}
+ #plan .priority-grid span{font-size:13px!important}
+ #plan .priority-grid h3{font-size:21px!important}
+ #plan .priority-grid p{font-size:16px!important;line-height:1.46!important}
+ #plan .priority-grid small{font-size:14px!important;line-height:1.4!important;margin-top:11px!important}
+ #plan .concise-roles{margin:17px 0!important}
+ #plan .concise-roles>div{padding:16px 18px!important}
+ #plan .concise-roles b{font-size:17px!important}
+ #plan .concise-roles p{font-size:15px!important}
+ #plan .plain-callout{padding:16px 20px!important;margin:17px 0!important}
+ #plan .plain-callout strong{font-size:16px!important}
+ #plan .plain-callout p{font-size:16px!important}
+ #decision .compact-roadmap{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:13px!important;margin:19px 0!important}
+ #decision .compact-roadmap>div{padding:17px!important}
+ #decision .compact-roadmap b{font-size:17px!important}
+ #decision .compact-roadmap p{font-size:15px!important;line-height:1.43!important}
+ #decision .decision-grid{grid-template-columns:1fr 1fr!important;gap:15px!important;margin:18px 0!important}
+ #decision .decision-grid>div{padding:17px 20px!important}
+ #decision .decision-grid b{font-size:17px!important}
+ #decision .decision-grid ul{font-size:15px!important;line-height:1.45!important}
+ #decision .decision-rule{padding:17px 21px!important;margin:16px 0!important}
+ #decision .decision-rule b{font-size:16px!important}
+ #decision .decision-rule p{font-size:15px!important}
+ #decision .source-note{font-size:12px!important}
+ #appendix-assumptions .compact-forecast th,#appendix-assumptions .compact-forecast td{padding:9px!important;font-size:14px!important}
+ #appendix-assumptions .appendix-list p{font-size:13px!important;padding:7px 0!important}
+ #appendix-operations .journey-strip>div,#appendix-operations .role-table>div{padding:14px 17px!important}
+ #appendix-operations .journey-strip b,#appendix-operations .role-table b{font-size:16px!important}
+ #appendix-operations .journey-strip p,#appendix-operations .role-table p{font-size:14px!important}
+ #appendix-operations .control-grid>div{padding:12px 14px!important}
+ #appendix-operations .control-grid b{font-size:15px!important}
+ #appendix-operations .control-grid p{font-size:13px!important}
+ #appendix-operations .partner-note{padding:12px 16px!important;margin:13px 0!important}
+ #appendix-operations .partner-note b{font-size:15px!important}
+ #appendix-operations .partner-note p{font-size:14px!important}
+ #appendix-measures .measure-table th,#appendix-measures .measure-table td{font-size:14px!important;padding:10px!important}
+ #appendix-measures .contribution{margin:13px 0!important;padding:12px 16px!important}
+ #appendix-measures .contribution p{font-size:13px!important}
+ #appendix-measures .appendix-list p{font-size:13px!important;padding:8px 0!important}
+ #appendix-measures .appendix-source{font-size:13px!important}
+}
