@@ -642,15 +642,18 @@
 @media(max-width:540px){#future h1{font-size:38px}#demand .volume-row small em{margin:3px 0 0}}
 
 /* Keep each opening sentence and each chart measure visually distinct. */
-#future h1{font-size:clamp(31px,3vw,47px);letter-spacing:-.04em;max-width:none}
+#future{container-type:inline-size}
+#future h1{letter-spacing:-.04em;max-width:none}
 #future h1 span{display:block;white-space:nowrap}
+#future h1 span:first-child{font-size:clamp(42px,6.65cqw,76px)}
+#future h1 span:last-child{font-size:clamp(39px,6.18cqw,70px)}
 #demand .volume-chart{gap:13px!important}
-#demand .volume-row{grid-template-columns:54px minmax(180px,.8fr) minmax(310px,1fr);gap:12px;align-items:start}
+#demand .volume-row{grid-template-columns:54px minmax(0,1fr) max-content;gap:12px;align-items:start}
 #demand .volume-row>b{padding-top:5px}
 #demand .volume-track{position:relative;height:43px!important;min-width:0}
 #demand .volume-bar{height:21px}
 #demand .volume-track .vendor-reps{position:absolute;top:24px;left:var(--bar-width);transform:translateX(-100%);width:max-content;max-width:100%;font-size:10px!important;font-weight:750;color:#705021;white-space:nowrap}
-#demand .volume-data{display:flex;align-items:baseline;gap:7px;min-width:0;padding-top:2px}
+#demand .volume-data{display:flex;align-items:baseline;justify-self:end;gap:7px;min-width:0;padding-top:2px}
 #demand .volume-data strong{font-size:17px;line-height:1.2;white-space:nowrap}
 #demand .volume-data span{font-size:11px;line-height:1.35;color:var(--muted)}
 #plan .plan-three article{display:flex;flex-direction:column}
@@ -658,8 +661,19 @@
 #plan .plan-three .priority-budget{min-height:64px}
 #plan .plan-three article ul{flex:1}
 #plan .plan-three .priority-why{margin-top:16px}
-#financial .scenario-gap,#financial .breakeven-note{font-size:13px;line-height:1.5;background:#edf6ed;border:2px solid var(--teal);padding:12px 15px;margin:14px 0}
-#financial .scenario-gap b,#financial .breakeven-note b{color:var(--teal)}
-@media(max-width:1250px){#future h1{font-size:clamp(28px,2.65vw,39px)}#demand .volume-row{grid-template-columns:52px minmax(130px,.7fr) minmax(245px,1fr);gap:8px}#demand .volume-data{display:block}#demand .volume-data span{display:block}}
-@media(max-width:800px){#future h1{font-size:clamp(28px,5vw,39px)}#future h1 span{white-space:normal}#plan .plan-three article h3,#plan .plan-three .priority-budget{min-height:0}}
-@media(max-width:600px){#demand .volume-row{grid-template-columns:50px minmax(0,1fr)}#demand .volume-track{grid-column:2}#demand .volume-data{grid-column:2;display:flex;flex-wrap:wrap;padding:0}#demand .volume-data span{font-size:11px}#future h1{font-size:clamp(27px,7vw,38px)}}
+#financial .breakeven-note{font-size:13px;line-height:1.5;background:#edf6ed;border:2px solid var(--teal);padding:12px 15px;margin:14px 0}
+#financial .breakeven-note>b{display:block;color:var(--teal);font-size:15px;margin-bottom:5px}
+#financial .breakeven-note ul{margin:0;padding-left:20px}
+#financial .breakeven-note li+li{margin-top:5px}
+#financial .range-grid ul{font-size:13px;line-height:1.48}
+#financial .range-grid li+li{margin-top:8px}
+#financial .range-grid b{font-size:30px}
+#financial .range-grid article li strong{color:var(--forest)}
+#financial .scenario-note{font-size:13px;line-height:1.45;margin:9px 0 12px;color:var(--forest)}
+#appendix-operations .journey-example{font-size:15px;font-weight:700;color:var(--forest);margin:8px 0 11px}
+#appendix-operations .appendix-measure-note>b{display:block;margin-bottom:7px}
+#appendix-operations .appendix-measure-note ul{margin:0;padding-left:20px;font-size:13px;line-height:1.5}
+#appendix-operations .appendix-measure-note li+li{margin-top:5px}
+@media(max-width:1250px){#demand .volume-row{grid-template-columns:52px minmax(0,1fr) max-content;gap:8px}#demand .volume-data{display:block;text-align:right}#demand .volume-data span{display:block}}
+@media(max-width:800px){#future h1 span{white-space:normal}#future h1 span:first-child,#future h1 span:last-child{font-size:clamp(28px,5vw,39px)}#plan .plan-three article h3,#plan .plan-three .priority-budget{min-height:0}}
+@media(max-width:600px){#demand .volume-row{grid-template-columns:50px minmax(0,1fr)}#demand .volume-track{grid-column:2}#demand .volume-data{grid-column:2;justify-self:start;text-align:left;display:flex;flex-wrap:wrap;padding:0}#demand .volume-data span{font-size:11px}#future h1 span:first-child,#future h1 span:last-child{font-size:clamp(27px,7vw,38px)}}

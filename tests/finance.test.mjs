@@ -31,12 +31,15 @@ test('medium case exposes the budget and vendor handling sensitivity',()=>{
   assert.equal(MEDIUM_FINANCE.casesPerVendorRepYear,4000);
   assert.deepEqual(MEDIUM_FINANCE.years.map(row=>row.budgetSavingsRate),[0.25,0.50,0.75]);
   assert.equal(Math.round(MEDIUM_FINANCE.totals.net),41092486);
+  assert.equal(Math.round(MEDIUM_FINANCE.years[2].plannedVendorSeats),455);
+  assert.equal(Math.round(MEDIUM_FINANCE.years[2].comparisonVendorSeats),1820);
 });
 
 test('low case shows loss if AI and vendor savings underperform',()=>{
   assert.deepEqual(LOW_FINANCE.years.map(row=>row.automationRate),[0.65,0.75,0.80]);
   assert.equal(Math.round(LOW_FINANCE.totals.net),-13506395);
   assert.equal(Math.round(LOW_FINANCE.years[2].weeklyIssues*(1-LOW_FINANCE.years[2].automationRate)),100000);
+  assert.equal(Math.round(LOW_FINANCE.years[2].plannedVendorSeats),910);
 });
 
 test('smaller vendor ownership lowers savings without changing case count',()=>{
@@ -59,4 +62,10 @@ test('break-even footer matches the assumed spend and high-case savings',()=>{
   );
   const breakEven=calculateFinance(FINANCE_ASSUMPTIONS,{automationRates});
   assert.ok(Math.abs(breakEven.totals.net)<0.01);
+  const roundedExample=calculateFinance(FINANCE_ASSUMPTIONS,{automationRates:[0.62,0.63,0.65]});
+  assert.equal(Math.round(roundedExample.years[2].plannedVendorSeats),2730);
+  assert.equal(Math.round(roundedExample.years[2].comparisonVendorSeats),3120);
+  assert.equal(Math.round(roundedExample.years[2].weeklyIssues*(1-roundedExample.years[2].automationRate)),175000);
+  assert.ok(roundedExample.totals.vendorSavingsInBudget>21000000);
+  assert.ok(roundedExample.totals.vendorSavingsInBudget<22000000);
 });
