@@ -2,20 +2,20 @@
 
 | Field | Basis |
 | --- | --- |
-| Idea | A concise candidate recommendation for support scale, with fictional operating examples |
-| Audience | Recruiter and hiring manager |
-| Channel | Public candidate take-home and demonstration |
-| Layer | Albert's application point of view, with source-backed assumptions and a separate fictional demonstration |
+| Idea | A three-year Support Operations recommendation with a separate fictional demonstration |
+| Audience | Recruiter, hiring manager, and leadership interview panel |
+| Channel | Public candidate take-home and presentation |
+| Layer | Albert's proposed operating approach |
 | Time horizon | Timely application artifact |
-| Short-term value | High, because leadership can review the recommendation before an interview |
-| Medium-term value | High, because Albert can explain and adjust each planning assumption |
-| Long-term value | Moderate, because the four-lens operating method can inform future interviews |
-| Bank labels used | PUBLIC-PERSONAL Meta and Rowland facts, APPLICATION-ONLY career context, and Albert's current request for a new strategic recommendation |
+| Short-term value | Clear presentation flow and a reviewable PDF |
+| Medium-term value | A year-by-year capacity case with explicit assumptions |
+| Long-term value | A method for linking customer outcomes to automation, partners, and internal teams |
+| Bank labels used | Albert's current request and cleared career facts |
 
 ## Draft
 
-The revised home page states Albert's proposed decision in first person, then shows the demand estimate, four operating measures, partner model, and rollout. The assignment explicitly permits AI assistance and asks for the candidate's judgment. Albert requested a new researched point of view and supplied his Meta and Rowland experience. The strategic recommendations remain draft judgments for Albert's review. The separate Operating Scenarios page uses fictional examples and no longer links his resume.
+The take-home follows situation, idea, how it works, benefit, and close. It uses Diagnose, Design, Deliver as the organizing method. The scenario assumptions and Year 1–3 path are labeled. The operating model gives each support layer a role, while the scorecard shows customer outcomes and contributor measures. The second tab remains a fictional demonstration.
 
 ## Omitted unsupported claims
 
-The page omits quantified support tenure, historical support-service outcomes, OpenAI internal targets, and production multi-agent execution. It does not convert Meta's sales metrics into Support results. Google Japan and Korea experience remains in the private presentation notes, since the shorter public page focuses on the most relevant examples.
+The take-home leaves out historical Support service outcomes, OpenAI internal targets, and production multi-agent execution. Meta sales results remain separate from Support results.
